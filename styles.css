@@ -182,13 +182,13 @@ select {
   font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-soft);
+  color: rgba(255, 244, 234, 0.9);
   font-weight: 700;
   transition: 0.25s ease;
 }
 
 .nav--desktop a:hover {
-  color: var(--primary-strong);
+  color: #ffffff;
 }
 
 .header__cta,
@@ -233,9 +233,9 @@ select {
   display: none;
   width: 48px;
   height: 48px;
-  border: 1px solid rgba(95, 63, 48, 0.14);
+  border: 1px solid rgba(255, 241, 231, 0.18);
   border-radius: 999px;
-  background: rgba(255, 248, 239, 0.92);
+  background: rgba(255, 255, 255, 0.08);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -247,7 +247,7 @@ select {
 .burger span {
   width: 18px;
   height: 2px;
-  background: var(--brown-deep);
+  background: #fff4ea;
   border-radius: 10px;
   transition: 0.25s ease;
 }
@@ -271,11 +271,10 @@ select {
   margin-inline: auto;
   padding: 1rem;
   border-radius: 28px;
-  background: rgba(255, 248, 239, 0.98);
-  border: 1px solid rgba(95, 63, 48, 0.12);
+  background: rgba(92, 59, 46, 0.96);
+  border: 1px solid rgba(255, 241, 231, 0.12);
   box-shadow: var(--shadow-md);
 }
-
 .mobile-menu.is-open {
   display: block;
 }
@@ -288,9 +287,9 @@ select {
 .mobile-menu__nav a {
   padding: 1rem 0.9rem;
   border-radius: 14px;
-  background: rgba(159, 109, 78, 0.07);
+  background: rgba(255, 255, 255, 0.06);
   font-weight: 700;
-  color: var(--text);
+  color: #fff4ea;
   min-height: 48px;
   display: flex;
   align-items: center;
