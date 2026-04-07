@@ -1,1733 +1,364 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bouya Coffee Supreme – Marokkanisches Café in Düsseldorf</title>
-<meta name="description" content="Bouya Coffee Supreme in Düsseldorf: Authentisches marokkanisches Frühstück, Specialty Coffee und hausgemachte Kuchen. Oststraße 124, Düsseldorf.">
-<meta property="og:title" content="Bouya Coffee Supreme Düsseldorf">
-<meta property="og:description" content="Ein Stück Marokko in Düsseldorf – Frühstück, Kaffee & Kuchentheke">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-/* ============================================================
-   RESET & ROOT
-============================================================ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
-img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
-
-:root {
-  --black:   #0A0A08;
-  --dark:    #1C1208;
-  --beige:   #F4E2B8;
-  --beige-light: #FDF8EE;
-  --beige-mid: #EDD9A3;
-  --teal:    #1A7A7A;
-  --teal-light: #3AACAC;
-  --sky:     #A8D8EA;
-  --sky-light: #D6EFF7;
-  --gold:    #C8963E;
-  --gold-light: #E8B86D;
-  --white:   #FEFEFE;
-  --text:    #1C1208;
-  --text-mid: #5A4E38;
-  --text-light: #8A7A62;
-
-  --font-display: 'Cinzel', serif;
-  --font-body:    'Raleway', sans-serif;
-  --font-accent:  'Cormorant Garamond', serif;
-
-  --radius: 4px;
-  --shadow: 0 8px 40px rgba(28,18,8,0.12);
-  --shadow-sm: 0 2px 12px rgba(28,18,8,0.08);
-}
-
-body {
-  font-family: var(--font-body);
-  background: var(--beige-light);
-  color: var(--text);
-  overflow-x: hidden;
-  line-height: 1.7;
-}
-
-/* ============================================================
-   MOSAIC PATTERN (SVG inline as background)
-============================================================ */
-.mosaic-bg {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Crect width='60' height='60' fill='%231A7A7A'/%3E%3Cpath d='M0 0 L30 0 L15 15 Z' fill='%231E8A8A' opacity='0.6'/%3E%3Cpath d='M60 0 L30 0 L45 15 Z' fill='%23157070' opacity='0.7'/%3E%3Cpath d='M0 60 L30 60 L15 45 Z' fill='%231E8A8A' opacity='0.6'/%3E%3Cpath d='M60 60 L30 60 L45 45 Z' fill='%23157070' opacity='0.7'/%3E%3Cpath d='M0 0 L0 30 L15 15 Z' fill='%23126060' opacity='0.5'/%3E%3Cpath d='M0 60 L0 30 L15 45 Z' fill='%23126060' opacity='0.5'/%3E%3Cpath d='M60 0 L60 30 L45 15 Z' fill='%23126060' opacity='0.5'/%3E%3Cpath d='M60 60 L60 30 L45 45 Z' fill='%23126060' opacity='0.5'/%3E%3Ccircle cx='30' cy='30' r='8' fill='none' stroke='%23A8D8EA' stroke-width='0.8' opacity='0.5'/%3E%3Crect x='22' y='22' width='16' height='16' fill='none' stroke='%23A8D8EA' stroke-width='0.6' opacity='0.4' transform='rotate(45 30 30)'/%3E%3C/svg%3E");
-}
-
-.mosaic-border-top {
-  height: 18px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='18'%3E%3Crect width='40' height='18' fill='%23F4E2B8'/%3E%3Cpolygon points='0,18 20,0 40,18' fill='%231A7A7A'/%3E%3Ccircle cx='20' cy='6' r='2' fill='%23A8D8EA'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-}
-
-.mosaic-border-bot {
-  height: 18px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='18'%3E%3Crect width='40' height='18' fill='%23F4E2B8'/%3E%3Cpolygon points='0,0 20,18 40,0' fill='%231A7A7A'/%3E%3Ccircle cx='20' cy='12' r='2' fill='%23A8D8EA'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-}
-
-/* ============================================================
-   NAVIGATION
-============================================================ */
-.nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2rem;
-  height: 72px;
-  background: rgba(10,10,8,0.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(168,216,234,0.15);
-  transition: background 0.3s;
-}
-
-.nav__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.nav__logo img {
-  height: 42px;
-  width: auto;
-  filter: brightness(0) invert(1);
-}
-
-.nav__links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav__links a {
-  font-family: var(--font-display);
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  color: rgba(244,226,184,0.75);
-  transition: color 0.2s;
-  text-transform: uppercase;
-}
-
-.nav__links a:hover { color: var(--teal-light); }
-
-.nav__cta {
-  font-family: var(--font-display);
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.55rem 1.25rem;
-  background: var(--teal);
-  color: var(--beige);
-  border-radius: var(--radius);
-  transition: all 0.2s;
-  border: 1px solid var(--teal-light);
-}
-
-.nav__cta:hover {
-  background: var(--teal-light);
-  color: var(--dark);
-}
-
-.nav__hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.nav__hamburger span {
-  width: 22px;
-  height: 2px;
-  background: var(--beige);
-  display: block;
-  transition: all 0.3s;
-}
-
-/* ============================================================
-   HERO
-============================================================ */
-.hero {
-  position: relative;
-  height: 100vh;
-  min-height: 650px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero__bg {
-  position: absolute;
-  inset: 0;
-  background-image: url('https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg');
-  background-size: cover;
-  background-position: center;
-  transform: scale(1.05);
-  animation: heroZoom 12s ease-out forwards;
-}
-
-@keyframes heroZoom {
-  to { transform: scale(1); }
-}
-
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(10,10,8,0.65) 0%,
-    rgba(26,122,122,0.18) 50%,
-    rgba(10,10,8,0.85) 100%
-  );
-}
-
-/* Decorative mosaic corners */
-.hero__corner {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  opacity: 0.5;
-}
-.hero__corner--tl { top: 90px; left: 20px; }
-.hero__corner--tr { top: 90px; right: 20px; transform: scaleX(-1); }
-.hero__corner--bl { bottom: 20px; left: 20px; transform: scaleY(-1); }
-.hero__corner--br { bottom: 20px; right: 20px; transform: scale(-1,-1); }
-
-.hero__content {
-  position: relative;
-  z-index: 2;
-  padding: 0 1.5rem;
-  animation: fadeUp 1s ease 0.3s both;
-}
-
-@keyframes fadeUp {
-  from { opacity:0; transform: translateY(30px); }
-  to   { opacity:1; transform: translateY(0); }
-}
-
-.hero__tag {
-  font-family: var(--font-display);
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
-  color: var(--teal-light);
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-}
-
-.hero__tag::before,
-.hero__tag::after {
-  content: '';
-  width: 40px;
-  height: 1px;
-  background: var(--teal-light);
-  display: block;
-}
-
-.hero__title {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 7vw, 5.5rem);
-  color: var(--beige);
-  line-height: 1.1;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.5rem;
-}
-
-.hero__title span {
-  color: var(--teal-light);
-}
-
-.hero__subtitle {
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(244,226,184,0.8);
-  margin-bottom: 2.5rem;
-  font-weight: 300;
-}
-
-.hero__btns {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-display);
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.875rem 2rem;
-  border-radius: var(--radius);
-  transition: all 0.25s;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-}
-
-.btn--primary {
-  background: var(--teal);
-  color: var(--beige);
-  border: 1px solid var(--teal-light);
-}
-
-.btn--primary:hover {
-  background: var(--teal-light);
-  color: var(--dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(26,122,122,0.35);
-}
-
-.btn--outline {
-  background: transparent;
-  color: var(--beige);
-  border: 1px solid rgba(244,226,184,0.5);
-}
-
-.btn--outline:hover {
-  background: rgba(244,226,184,0.1);
-  border-color: var(--beige);
-  transform: translateY(-2px);
-}
-
-.hero__scroll {
-  position: absolute;
-  bottom: 2.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  opacity: 0.6;
-  animation: bounce 2s ease-in-out infinite;
-}
-
-@keyframes bounce {
-  0%,100% { transform: translateX(-50%) translateY(0); }
-  50%      { transform: translateX(-50%) translateY(6px); }
-}
-
-.hero__scroll span {
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
-  color: var(--beige);
-  font-family: var(--font-display);
-  text-transform: uppercase;
-}
-
-/* ============================================================
-   SECTION BASICS
-============================================================ */
-section { position: relative; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
-
-.section-label {
-  font-family: var(--font-display);
-  font-size: 0.6rem;
-  letter-spacing: 0.3em;
-  color: var(--teal);
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.section-label::before {
-  content: '';
-  width: 32px;
-  height: 1px;
-  background: var(--teal);
-}
-
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
-  color: var(--dark);
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  margin-bottom: 1rem;
-}
-
-.section-text {
-  font-family: var(--font-accent);
-  font-size: 1.1rem;
-  color: var(--text-mid);
-  font-weight: 300;
-  line-height: 1.8;
-  max-width: 52ch;
-}
-
-/* ============================================================
-   FEATURES BAR
-============================================================ */
-.features {
-  background: var(--dark);
-  padding: 1.25rem 0;
-  overflow: hidden;
-}
-
-.features__track {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-  white-space: nowrap;
-  animation: marquee 20s linear infinite;
-}
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-.features__item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-shrink: 0;
-}
-
-.features__icon {
-  font-size: 1rem;
-  color: var(--teal-light);
-}
-
-.features__text {
-  font-family: var(--font-display);
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
-  color: rgba(244,226,184,0.7);
-  text-transform: uppercase;
-}
-
-/* ============================================================
-   ABOUT
-============================================================ */
-.about {
-  padding: 6rem 0;
-  background: var(--beige-light);
-}
-
-.about__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: center;
-}
-
-.about__imgs {
-  position: relative;
-  height: 520px;
-}
-
-.about__img-main {
-  position: absolute;
-  top: 0; left: 0;
-  width: 72%;
-  height: 82%;
-  object-fit: cover;
-  border-radius: 2px;
-  box-shadow: var(--shadow);
-}
-
-.about__img-second {
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 55%;
-  height: 55%;
-  object-fit: cover;
-  border-radius: 2px;
-  box-shadow: var(--shadow);
-  border: 4px solid var(--beige-light);
-}
-
-.about__decor {
-  position: absolute;
-  top: -16px; left: -16px;
-  width: 80px;
-  height: 80px;
-  border: 2px solid var(--teal);
-  border-radius: 2px;
-  opacity: 0.4;
-}
-
-.about__decor2 {
-  position: absolute;
-  bottom: 30px; right: -20px;
-  width: 50px;
-  height: 50px;
-  background: var(--teal);
-  opacity: 0.15;
-  border-radius: 50%;
-}
-
-.about__mosaic {
-  position: absolute;
-  bottom: 60px; left: 40%;
-  width: 48px;
-  height: 48px;
-  opacity: 0.6;
-}
-
-.about__badge {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--teal);
-  color: var(--beige);
-  padding: 1rem 1.25rem;
-  border-radius: 2px;
-  margin-bottom: 2rem;
-}
-
-.about__badge-num {
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  line-height: 1;
-}
-
-.about__badge-text {
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.8;
-}
-
-.about__quote {
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: 1.2rem;
-  color: var(--text-mid);
-  border-left: 2px solid var(--teal);
-  padding-left: 1.25rem;
-  margin-top: 1.5rem;
-  line-height: 1.7;
-}
-
-/* ============================================================
-   MENU
-============================================================ */
-.menu {
-  padding: 6rem 0;
-  background: var(--dark);
-  position: relative;
-}
-
-.menu::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 0 L30 0 L15 15 Z' fill='%231A7A7A' opacity='0.12'/%3E%3Cpath d='M60 0 L30 0 L45 15 Z' fill='%231A7A7A' opacity='0.08'/%3E%3Cpath d='M0 60 L30 60 L15 45 Z' fill='%231A7A7A' opacity='0.12'/%3E%3Cpath d='M60 60 L30 60 L45 45 Z' fill='%231A7A7A' opacity='0.08'/%3E%3C/svg%3E");
-  pointer-events: none;
-}
-
-.menu .section-label { color: var(--teal-light); }
-.menu .section-label::before { background: var(--teal-light); }
-.menu .section-title { color: var(--beige); }
-
-.menu__tabs {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin: 2.5rem 0 3rem;
-}
-
-.menu__tab {
-  font-family: var(--font-display);
-  font-size: 0.58rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.6rem 1.25rem;
-  border-radius: var(--radius);
-  border: 1px solid rgba(168,216,234,0.25);
-  background: transparent;
-  color: rgba(244,226,184,0.5);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.menu__tab.active,
-.menu__tab:hover {
-  background: var(--teal);
-  border-color: var(--teal-light);
-  color: var(--beige);
-}
-
-.menu__panel { display: none; }
-.menu__panel.active { display: block; }
-
-.menu__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 1px;
-  background: rgba(168,216,234,0.08);
-  border: 1px solid rgba(168,216,234,0.08);
-}
-
-.menu__item {
-  background: rgba(255,255,255,0.025);
-  padding: 1.5rem;
-  transition: background 0.2s;
-}
-
-.menu__item:hover {
-  background: rgba(26,122,122,0.1);
-}
-
-.menu__item-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 0.4rem;
-}
-
-.menu__item-name {
-  font-family: var(--font-accent);
-  font-size: 1.05rem;
-  color: var(--beige);
-  font-weight: 500;
-  line-height: 1.3;
-  flex: 1;
-}
-
-.menu__item-price {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  color: var(--teal-light);
-  white-space: nowrap;
-}
-
-.menu__item-desc {
-  font-size: 0.8rem;
-  color: rgba(244,226,184,0.45);
-  line-height: 1.5;
-}
-
-.menu__extras {
-  margin-top: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(168,216,234,0.1);
-  font-size: 0.75rem;
-  color: rgba(244,226,184,0.35);
-}
-
-.menu__extras strong {
-  color: rgba(244,226,184,0.55);
-  font-family: var(--font-display);
-  font-size: 0.55rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-/* ============================================================
-   GALLERY
-============================================================ */
-.gallery {
-  padding: 6rem 0;
-  background: var(--beige-light);
-}
-
-.gallery__grid {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 260px 260px;
-  gap: 12px;
-}
-
-.gallery__item {
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-}
-
-.gallery__item--large {
-  grid-row: span 2;
-}
-
-.gallery__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-  filter: saturate(0.9);
-}
-
-.gallery__item:hover img {
-  transform: scale(1.06);
-  filter: saturate(1.1);
-}
-
-.gallery__item::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(26,122,122,0.3) 0%, transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.gallery__item:hover::after { opacity: 1; }
-
-/* ============================================================
-   REVIEWS
-============================================================ */
-.reviews {
-  padding: 6rem 0;
-  background: var(--sky-light);
-  position: relative;
-  overflow: hidden;
-}
-
-.reviews::before {
-  content: '★★★★★';
-  position: absolute;
-  top: -1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 8rem;
-  color: var(--teal);
-  opacity: 0.04;
-  letter-spacing: -0.1em;
-  white-space: nowrap;
-}
-
-.reviews__grid {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.review-card {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  border-top: 2px solid var(--teal);
-}
-
-.review-card::before {
-  content: '"';
-  position: absolute;
-  top: 1rem; right: 1.5rem;
-  font-family: var(--font-accent);
-  font-size: 5rem;
-  line-height: 1;
-  color: var(--teal);
-  opacity: 0.1;
-}
-
-.review-stars {
-  color: var(--gold);
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
-}
-
-.review-text {
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: 0.95rem;
-  color: var(--text-mid);
-  line-height: 1.7;
-  margin-bottom: 1.25rem;
-}
-
-.review-author {
-  font-family: var(--font-display);
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  color: var(--text-light);
-  text-transform: uppercase;
-}
-
-/* ============================================================
-   INFO (Hours + Contact)
-============================================================ */
-.info {
-  padding: 6rem 0;
-  background: var(--dark);
-  position: relative;
-}
-
-.info::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cpath d='M0 0 L30 0 L15 15 Z' fill='%231A7A7A' opacity='0.1'/%3E%3Cpath d='M60 0 L30 0 L45 15 Z' fill='%231A7A7A' opacity='0.07'/%3E%3Cpath d='M0 60 L30 60 L15 45 Z' fill='%231A7A7A' opacity='0.1'/%3E%3Cpath d='M60 60 L30 60 L45 45 Z' fill='%231A7A7A' opacity='0.07'/%3E%3C/svg%3E");
-  pointer-events: none;
-}
-
-.info__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
-}
-
-.info__block-title {
-  font-family: var(--font-display);
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--teal-light);
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.info__block-title::before {
-  content: '';
-  display: block;
-  width: 20px;
-  height: 1px;
-  background: var(--teal-light);
-}
-
-.hours__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(168,216,234,0.08);
-  font-size: 0.85rem;
-}
-
-.hours__day {
-  font-family: var(--font-accent);
-  color: rgba(244,226,184,0.6);
-}
-
-.hours__time {
-  font-family: var(--font-display);
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  color: var(--beige);
-}
-
-.hours__time.closed {
-  color: rgba(244,226,184,0.3);
-}
-
-.contact__item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
-}
-
-.contact__icon {
-  width: 36px;
-  height: 36px;
-  flex-shrink: 0;
-  background: rgba(26,122,122,0.2);
-  border: 1px solid rgba(26,122,122,0.3);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  color: var(--teal-light);
-}
-
-.contact__label {
-  font-family: var(--font-display);
-  font-size: 0.55rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(244,226,184,0.4);
-  margin-bottom: 0.25rem;
-}
-
-.contact__value {
-  font-family: var(--font-accent);
-  font-size: 0.95rem;
-  color: var(--beige);
-  line-height: 1.4;
-}
-
-.map__frame {
-  position: relative;
-  border-radius: 2px;
-  overflow: hidden;
-  height: 200px;
-  background: rgba(26,122,122,0.1);
-  border: 1px solid rgba(26,122,122,0.2);
-}
-
-.map__frame iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  filter: grayscale(0.3) contrast(1.1);
-}
-
-/* ============================================================
-   CTA SECTION
-============================================================ */
-.cta-section {
-  padding: 5rem 0;
-  background: var(--teal);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='12' fill='none' stroke='%23A8D8EA' stroke-width='0.5' opacity='0.3'/%3E%3Crect x='10' y='10' width='20' height='20' fill='none' stroke='%23A8D8EA' stroke-width='0.4' opacity='0.2' transform='rotate(45 20 20)'/%3E%3C/svg%3E");
-  pointer-events: none;
-}
-
-.cta-section h2 {
-  font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  color: var(--beige);
-  margin-bottom: 0.75rem;
-  position: relative;
-}
-
-.cta-section p {
-  font-family: var(--font-accent);
-  font-style: italic;
-  font-size: 1.1rem;
-  color: rgba(244,226,184,0.8);
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.cta-section .btn--light {
-  background: var(--beige);
-  color: var(--teal);
-  border: none;
-  position: relative;
-}
-
-.cta-section .btn--light:hover {
-  background: var(--dark);
-  color: var(--beige);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(10,10,8,0.3);
-}
-
-/* ============================================================
-   FOOTER
-============================================================ */
-.footer {
-  background: var(--black);
-  padding: 3rem 0 2rem;
-  border-top: 1px solid rgba(168,216,234,0.08);
-}
-
-.footer__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.footer__logo img {
-  height: 36px;
-  filter: brightness(0) invert(1);
-  opacity: 0.6;
-}
-
-.footer__links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.footer__links a {
-  font-family: var(--font-display);
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(244,226,184,0.35);
-  transition: color 0.2s;
-}
-
-.footer__links a:hover { color: var(--teal-light); }
-
-.footer__social {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.footer__social a {
-  width: 32px;
-  height: 32px;
-  border-radius: 2px;
-  border: 1px solid rgba(168,216,234,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  color: rgba(244,226,184,0.4);
-  transition: all 0.2s;
-}
-
-.footer__social a:hover {
-  background: var(--teal);
-  border-color: var(--teal);
-  color: var(--beige);
-}
-
-.footer__copy {
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(168,216,234,0.06);
-  font-size: 0.7rem;
-  color: rgba(244,226,184,0.2);
-  text-align: center;
-  font-family: var(--font-display);
-  letter-spacing: 0.1em;
-}
-
-/* ============================================================
-   MOBILE NAV
-============================================================ */
-.nav__menu-mobile {
-  display: none;
-  flex-direction: column;
-  position: fixed;
-  top: 72px; left: 0; right: 0;
-  background: rgba(10,10,8,0.98);
-  backdrop-filter: blur(20px);
-  padding: 2rem;
-  gap: 1.5rem;
-  z-index: 99;
-  border-top: 1px solid rgba(168,216,234,0.1);
-}
-
-.nav__menu-mobile a {
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  letter-spacing: 0.2em;
-  color: rgba(244,226,184,0.7);
-  text-transform: uppercase;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(168,216,234,0.08);
-  display: block;
-}
-
-.nav__menu-mobile.open { display: flex; }
-
-/* ============================================================
-   ANIMATIONS
-============================================================ */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ============================================================
-   RESPONSIVE
-============================================================ */
-@media (max-width: 1024px) {
-  .about__inner { grid-template-columns: 1fr; gap: 3rem; }
-  .about__imgs { height: 340px; }
-  .info__grid { grid-template-columns: 1fr 1fr; }
-  .reviews__grid { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 768px) {
-  .nav__links { display: none; }
-  .nav__cta { display: none; }
-  .nav__hamburger { display: flex; }
-
-  .gallery__grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-  }
-
-  .gallery__item--large { grid-row: span 1; }
-
-  .info__grid { grid-template-columns: 1fr; }
-  .reviews__grid { grid-template-columns: 1fr; }
-  .menu__grid { grid-template-columns: 1fr; }
-
-  .footer__inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery__grid { grid-template-columns: 1fr; }
-  .hero__corner { display: none; }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bouya Coffee Supreme – Marokkanisches Café in Düsseldorf</title>
+  <meta name="description" content="Bouya Coffee Supreme in Düsseldorf: Marokkanisches Frühstück bis 16 Uhr, Specialty Coffee, hausgemachte Kuchen und ein einladendes Café-Erlebnis auf der Oststraße 124." />
+  <meta property="og:title" content="Bouya Coffee Supreme Düsseldorf" />
+  <meta property="og:description" content="Ein Stück Marokko mitten in Düsseldorf – Frühstück, Kaffee, Kuchen und Atmosphäre." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg" />
+  <meta name="theme-color" content="#8fd7eb" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<!-- ============================================================
-     NAVIGATION
-============================================================ -->
-<nav class="nav" id="nav">
-  <div class="nav__logo">
-    <img src="https://bouyacoffee.com/wp-content/uploads/2021/09/bouya-logo-1.png" alt="Bouya Coffee Supreme">
-  </div>
-  <ul class="nav__links">
-    <li><a href="#about">Über uns</a></li>
-    <li><a href="#menu">Speisekarte</a></li>
-    <li><a href="#gallery">Galerie</a></li>
-    <li><a href="#reviews">Bewertungen</a></li>
-    <li><a href="#info">Kontakt</a></li>
-  </ul>
-  <a class="nav__cta" href="#info">Besuchen Sie uns</a>
-  <div class="nav__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menü öffnen">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
-
-<div class="nav__menu-mobile" id="mobileMenu">
-  <a href="#about" onclick="toggleMenu()">Über uns</a>
-  <a href="#menu" onclick="toggleMenu()">Speisekarte</a>
-  <a href="#gallery" onclick="toggleMenu()">Galerie</a>
-  <a href="#reviews" onclick="toggleMenu()">Bewertungen</a>
-  <a href="#info" onclick="toggleMenu()">Kontakt</a>
-</div>
-
-
-<!-- ============================================================
-     HERO
-============================================================ -->
-<section class="hero" id="home">
-  <div class="hero__bg"></div>
-  <div class="hero__overlay"></div>
-
-  <!-- Decorative SVG corners -->
-  <svg class="hero__corner hero__corner--tl" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0 L60 0 L30 30 Z" fill="#1A7A7A" opacity="0.6"/>
-    <path d="M0 0 L0 60 L30 30 Z" fill="#3AACAC" opacity="0.4"/>
-    <path d="M30 30 L60 0 L60 60 Z" fill="#1A7A7A" opacity="0.2"/>
-    <rect x="8" y="8" width="28" height="28" fill="none" stroke="#A8D8EA" stroke-width="0.8" opacity="0.5" transform="rotate(45 22 22)"/>
-    <circle cx="30" cy="30" r="6" fill="none" stroke="#A8D8EA" stroke-width="0.8" opacity="0.6"/>
-  </svg>
-  <svg class="hero__corner hero__corner--tr" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0 L60 0 L30 30 Z" fill="#1A7A7A" opacity="0.6"/>
-    <path d="M0 0 L0 60 L30 30 Z" fill="#3AACAC" opacity="0.4"/>
-    <path d="M30 30 L60 0 L60 60 Z" fill="#1A7A7A" opacity="0.2"/>
-    <rect x="8" y="8" width="28" height="28" fill="none" stroke="#A8D8EA" stroke-width="0.8" opacity="0.5" transform="rotate(45 22 22)"/>
-    <circle cx="30" cy="30" r="6" fill="none" stroke="#A8D8EA" stroke-width="0.8" opacity="0.6"/>
-  </svg>
-
-  <div class="hero__content">
-    <div class="hero__tag">Oststraße 124 · Düsseldorf</div>
-    <h1 class="hero__title">Bouya<br><span>Coffee</span> Supreme</h1>
-    <p class="hero__subtitle">Ein Stück Marokko mitten in Düsseldorf</p>
-    <div class="hero__btns">
-      <a href="#menu" class="btn btn--primary">Speisekarte entdecken</a>
-      <a href="#info" class="btn btn--outline">Anfahrt & Öffnungszeiten</a>
-    </div>
-  </div>
-
-  <div class="hero__scroll">
-    <span>Scroll</span>
-    <svg width="12" height="20" viewBox="0 0 12 20" fill="none">
-      <rect x="1" y="1" width="10" height="18" rx="5" stroke="rgba(244,226,184,0.5)" stroke-width="1.5"/>
-      <circle cx="6" cy="6" r="2" fill="rgba(244,226,184,0.6)"/>
-    </svg>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     FEATURES MARQUEE
-============================================================ -->
-<div class="features">
-  <div class="features__track">
-    <!-- repeated twice for seamless loop -->
-    <div class="features__item"><span class="features__icon">☕</span><span class="features__text">Specialty Coffee</span></div>
-    <div class="features__item"><span class="features__icon">🥐</span><span class="features__text">Marokkanisches Frühstück</span></div>
-    <div class="features__item"><span class="features__icon">🍵</span><span class="features__text">Frischer Minztee</span></div>
-    <div class="features__item"><span class="features__icon">🧁</span><span class="features__text">Hausgemachte Kuchen</span></div>
-    <div class="features__item"><span class="features__icon">🥑</span><span class="features__text">Fresh & Tasty</span></div>
-    <div class="features__item"><span class="features__icon">📶</span><span class="features__text">Freies WLAN</span></div>
-    <div class="features__item"><span class="features__icon">🌿</span><span class="features__text">Frühstück bis 16 Uhr</span></div>
-    <!-- repeat -->
-    <div class="features__item"><span class="features__icon">☕</span><span class="features__text">Specialty Coffee</span></div>
-    <div class="features__item"><span class="features__icon">🥐</span><span class="features__text">Marokkanisches Frühstück</span></div>
-    <div class="features__item"><span class="features__icon">🍵</span><span class="features__text">Frischer Minztee</span></div>
-    <div class="features__item"><span class="features__icon">🧁</span><span class="features__text">Hausgemachte Kuchen</span></div>
-    <div class="features__item"><span class="features__icon">🥑</span><span class="features__text">Fresh & Tasty</span></div>
-    <div class="features__item"><span class="features__icon">📶</span><span class="features__text">Freies WLAN</span></div>
-    <div class="features__item"><span class="features__icon">🌿</span><span class="features__text">Frühstück bis 16 Uhr</span></div>
-  </div>
-</div>
-
-
-<!-- ============================================================
-     ABOUT
-============================================================ -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about__inner">
-      <div class="about__imgs reveal">
-        <img class="about__img-main"
-          src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fruehstueck.jpg"
-          alt="Marokkanisches Frühstück bei Bouya Coffee">
-        <img class="about__img-second"
-          src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-getraenke.jpg"
-          alt="Getränke bei Bouya Coffee">
-        <div class="about__decor"></div>
-        <div class="about__decor2"></div>
-        <!-- Zellige SVG accent -->
-        <svg class="about__mosaic" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="48" height="48" fill="#1A7A7A"/>
-          <path d="M0 0 L24 0 L12 12 Z" fill="#3AACAC" opacity="0.7"/>
-          <path d="M48 0 L24 0 L36 12 Z" fill="#126060" opacity="0.7"/>
-          <path d="M0 48 L24 48 L12 36 Z" fill="#3AACAC" opacity="0.7"/>
-          <path d="M48 48 L24 48 L36 36 Z" fill="#126060" opacity="0.7"/>
-          <path d="M0 0 L0 24 L12 12 Z" fill="#126060" opacity="0.5"/>
-          <path d="M0 48 L0 24 L12 36 Z" fill="#126060" opacity="0.5"/>
-          <path d="M48 0 L48 24 L36 12 Z" fill="#126060" opacity="0.5"/>
-          <path d="M48 48 L48 24 L36 36 Z" fill="#126060" opacity="0.5"/>
-          <circle cx="24" cy="24" r="7" fill="none" stroke="#A8D8EA" stroke-width="1.2" opacity="0.8"/>
-          <rect x="17" y="17" width="14" height="14" fill="none" stroke="#A8D8EA" stroke-width="0.8" opacity="0.6" transform="rotate(45 24 24)"/>
-        </svg>
-      </div>
-
-      <div class="about__text reveal">
-        <div class="section-label">Unsere Geschichte</div>
-        <h2 class="section-title">Herzlich willkommen<br>bei Bouya Coffee</h2>
-        <p class="section-text">
-          Gemütlich frühstücken, einen frisch gebrühten Kaffee trinken und entspannt in den Tag starten — 
-          dafür steht Bouya Coffee Supreme in Düsseldorf.
-        </p>
-        <blockquote class="about__quote">
-          „Unsere Produkte werden sorgfältig und liebevoll ausgesucht und nach Möglichkeit von regionalen Händlern bezogen."
-        </blockquote>
-        <p class="section-text" style="margin-top: 1.25rem;">
-          Von authentischem marokkanischen Frühstück über frisch gebackenen Kuchen bis zu 
-          sensationellen Iced Matchas — wir freuen uns, Ihnen ein Lächeln ins Gesicht zu zaubern.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     MENU
-============================================================ -->
-<section class="menu" id="menu">
-  <div class="mosaic-border-top" style="background-color:#FDF8EE; position:absolute; top:0; left:0; right:0;"></div>
-  <div class="container" style="position:relative; z-index:1; padding-top: 2rem;">
-    <div class="section-label reveal">Speisekarte</div>
-    <h2 class="section-title reveal">Was wir für Sie bereithalten</h2>
-
-    <div class="menu__tabs">
-      <button class="menu__tab active" onclick="showTab('fruehstueck', this)">Frühstück</button>
-      <button class="menu__tab" onclick="showTab('tasty', this)">Fresh & Tasty</button>
-      <button class="menu__tab" onclick="showTab('aufstriche', this)">Aufstriche & Joghurt</button>
-      <button class="menu__tab" onclick="showTab('msemen', this)">Msemen & Harcha</button>
-      <button class="menu__tab" onclick="showTab('getraenke', this)">Kaffee & Tee</button>
-      <button class="menu__tab" onclick="showTab('kalt', this)">Kaltgetränke</button>
-    </div>
-
-    <!-- Frühstück -->
-    <div class="menu__panel active" id="tab-fruehstueck">
-      <div class="menu__grid">
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Marokkanisches Frühstück (1 Person)</div>
-            <div class="menu__item-price">15,90 €</div>
-          </div>
-          <div class="menu__item-desc">2 Spiegeleier, 2 Vache qui rit, Oliven, Honig, Msemen, Fladenbrot, Kanne frischer Minztee & frisch gepresster Orangensaft</div>
-          <div class="menu__extras"><strong>Extra wählbar</strong>Gebratene Sucuk 3,90 € · Chatar Wurst 3,50 €</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Marokkanisches Frühstück (2 Personen)</div>
-            <div class="menu__item-price">45,90 €</div>
-          </div>
-          <div class="menu__item-desc">3 Salate, Hummus, Walnuss-Pesto, Minz-Joghurt-Dip, Rote Bete, Oliven, Paprika, Feigenmarmelade, Honig, Butter, Gouda, Chatar, Obst & Gemüse, 2 Spiegeleier, Msemen, Harcha, 2 Fladenbrote, große Kanne Minztee & 2 Orangensäfte</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Souk-Platte</div>
-            <div class="menu__item-price">16,90 €</div>
-          </div>
-          <div class="menu__item-desc">Hausgemachter Hummus trifft auf würziges Walnuss-Pesto, cremigen Feta, eingelegte Paprika, Oliven & saisonale Extras — zum Teilen oder alleine genießen</div>
-          <div class="menu__extras"><strong>Extra wählbar</strong>Gouda 1,00 € · Brie / Mozzarella 1,50 € · Mortadella 1,00 € · Salami (Rind) 1,20 € · Lachs 2,90 € · Avocado 2,50 € · Spiegelei 2,00 € · Rührei (2 Ei) 4,90 €</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Belegte Stulle — Avocado, Lachs & Spiegelei</div>
-            <div class="menu__item-price">13,90 €</div>
-          </div>
-          <div class="menu__item-desc">Auf Rucola, frisch belegt und liebevoll angerichtet</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Belegte Stulle — Pesto, Rucola, Tomate & Burrata</div>
-            <div class="menu__item-price">14,90 €</div>
-          </div>
-          <div class="menu__item-desc">Cremige Burrata trifft auf frisches Pesto und knackigen Rucola</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Omeletts</div>
-            <div class="menu__item-price">ab 7,90 €</div>
-          </div>
-          <div class="menu__item-desc">Aus 3 Eiern, dazu Brot, Oliven & Vache qui rit</div>
-          <div class="menu__extras"><strong>Varianten</strong>Natur 7,90 € · Spinat & Feta 9,90 € · Sucuk 9,90 € · Chatar Wurst 9,90 € · Tomate & Feta 9,90 €</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Fresh & Tasty -->
-    <div class="menu__panel" id="tab-tasty">
-      <div class="menu__grid">
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Überbackene Avocado</div>
-            <div class="menu__item-price">15,90 €</div>
-          </div>
-          <div class="menu__item-desc">Avocado überbacken mit Ei und Käse auf Rucola, dazu Walnuss-Pesto, Oliven und Brot</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Geröstete Avocado</div>
-            <div class="menu__item-price">16,90 €</div>
-          </div>
-          <div class="menu__item-desc">Geröstete Avocado mit Tomaten-Minz-Salat auf Rucola, dazu geröstetes Brot mit Räucherlachs</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top">
-            <div class="menu__item-name">Shakshuka mit Ei & Feta</div>
-            <div class="menu__item-price">15,90 €</div>
-          </div>
-          <div class="menu__item-desc">Aromatische Pfanne mit pochierten Eiern in würziger Tomatensoße, mit Feta und Lauchzwiebeln, dazu Brot und Oliven</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Aufstriche & Joghurt -->
-    <div class="menu__panel" id="tab-aufstriche">
-      <div class="menu__grid">
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Hummus mit Brot</div><div class="menu__item-price">7,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Walnuss-Pesto mit Brot</div><div class="menu__item-price">9,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Minz-Feta-Dip mit Fladenbrot</div><div class="menu__item-price">8,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Joghurt mit Obst</div><div class="menu__item-price">9,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Joghurt mit Obst, Müsli, Honig & Nüssen</div><div class="menu__item-price">12,90 €</div></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Msemen & Harcha -->
-    <div class="menu__panel" id="tab-msemen">
-      <div class="menu__grid">
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Msemen</div><div class="menu__item-price">3,50 €</div></div>
-          <div class="menu__item-desc">Traditionelles marokkanisches Fladenbrot, fluffig und warm</div>
-          <div class="menu__extras"><strong>Dazu wählbar</strong>Nutella · Honig · Pistazien-Creme · Lotus-Creme — je 2,50–3,50 €</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Harcha</div><div class="menu__item-price">3,50 €</div></div>
-          <div class="menu__item-desc">Marokkanisches Grießbrot, außen knusprig, innen weich</div>
-          <div class="menu__extras"><strong>Dazu wählbar</strong>Nutella · Honig · Pistazien-Creme · Lotus-Creme — je 2,50–3,50 €</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Heißgetränke -->
-    <div class="menu__panel" id="tab-getraenke">
-      <div class="menu__grid">
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Espresso</div><div class="menu__item-price">3,00 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Espresso Macchiato</div><div class="menu__item-price">3,50 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Cortado</div><div class="menu__item-price">3,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Cappuccino</div><div class="menu__item-price">3,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Latte Macchiato</div><div class="menu__item-price">4,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Flat White</div><div class="menu__item-price">4,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Matcha Latte</div><div class="menu__item-price">5,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Frischer Marokkanischer Minztee</div><div class="menu__item-price">ab 4,50 €</div></div>
-          <div class="menu__item-desc">Klein 4,50 € · Mittel 7,90 € · Groß 10,90 €</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Hot Chocolate</div><div class="menu__item-price">5,90 €</div></div>
-          <div class="menu__item-desc">Vollmilch · Weiße Schokolade · Zartbitter · Schokiato</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Schwarztee</div><div class="menu__item-price">2,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Extras</div><div class="menu__item-price">ab 1,00 €</div></div>
-          <div class="menu__item-desc">Extra Shot 1,50 € · Hafer/Mandel/Kokos/Soja 1,00 € · Caramel/Haselnuss/Vanille Sirup 1,00 €</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Kaltgetränke -->
-    <div class="menu__panel" id="tab-kalt">
-      <div class="menu__grid">
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Iced Americano</div><div class="menu__item-price">4,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Iced Latte</div><div class="menu__item-price">5,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Iced Matcha</div><div class="menu__item-price">6,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Iced Strawberry Matcha</div><div class="menu__item-price">7,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Iced Mango / Blueberry Matcha</div><div class="menu__item-price">7,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Smoothies</div><div class="menu__item-price">7,90 €</div></div>
-          <div class="menu__item-desc">Avocado-Banane · Avocado-Dattel · Himbeere-Banane-Orange · Mango-Ingwer-Orange</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Hausgemachter Eistee</div><div class="menu__item-price">5,90 €</div></div>
-          <div class="menu__item-desc">Minze-Limette · Himbeere</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Schorlen</div><div class="menu__item-price">5,90 €</div></div>
-          <div class="menu__item-desc">Mango-Minz · Johannisbeere · Maracuja</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Alkoholfreie Cocktails</div><div class="menu__item-price">6,90 €</div></div>
-          <div class="menu__item-desc">Virgin Mojito · Ipanema</div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Frisch gepresster Orangensaft</div><div class="menu__item-price">4,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Fritz Kola & Limonaden</div><div class="menu__item-price">3,90 €</div></div>
-        </div>
-        <div class="menu__item">
-          <div class="menu__item-top"><div class="menu__item-name">Wasser still & Sprudel</div><div class="menu__item-price">ab 3,50 €</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div style="text-align:center; margin-top:2.5rem; position:relative; z-index:1;">
-      <a href="https://bouyacoffee.com/speisekarte/digitale-speisekarte.pdf" target="_blank" class="btn btn--outline" style="border-color:rgba(168,216,234,0.3); color:rgba(244,226,184,0.7);">
-        📄 Vollständige Speisekarte (PDF)
-      </a>
-    </div>
-  </div>
-  <div class="mosaic-border-bot" style="background-color:#FDF8EE; position:absolute; bottom:0; left:0; right:0;"></div>
-</section>
-
-
-<!-- ============================================================
-     GALLERY
-============================================================ -->
-<section class="gallery" id="gallery">
-  <div class="container">
-    <div class="section-label reveal">Galerie</div>
-    <h2 class="section-title reveal">Einblicke in unsere Welt</h2>
-    <div class="gallery__grid reveal">
-      <div class="gallery__item gallery__item--large">
-        <img src="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg" alt="Bouya Coffee Atmosphäre">
-      </div>
-      <div class="gallery__item">
-        <img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fruehstueck.jpg" alt="Marokkanisches Frühstück">
-      </div>
-      <div class="gallery__item">
-        <img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fresh-tasty.jpg" alt="Fresh & Tasty">
-      </div>
-      <div class="gallery__item">
-        <img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-getraenke.jpg" alt="Getränke">
-      </div>
-      <div class="gallery__item">
-        <img src="https://bouyacoffee.com/wp-content/uploads/2022/06/fd128ba6-4edb-11ec-8170-8ee065675e52___bouya_coffee_supreme_cover_1.jpg-1-696x392-1.webp" alt="Bouya Coffee Supreme">
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     REVIEWS
-============================================================ -->
-<section class="reviews" id="reviews">
-  <div class="container">
-    <div class="section-label reveal">Was Gäste sagen</div>
-    <h2 class="section-title reveal">Stimmen unserer Gäste</h2>
-    <div class="reviews__grid">
-      <div class="review-card reveal">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">This breakfast was like a short trip to Morocco! Very authentic with variety of choices for everyone. The local tea is so refreshing — my 3rd visit, to be continued!</p>
-        <div class="review-author">Ekrem Namazci · Google</div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">Super leckeres, reichhaltiges Frühstück zu einem fairen Preis! Ein Stück Orient in Düsseldorf ❤️ Definitiv nicht unser letzter Besuch!</p>
-        <div class="review-author">Janine · Google</div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">The staff are welcoming and lovely... The food and cakes are so tasty and fresh! A must visit if you're in that area of the city — and if you're not, it's worth the travel.</p>
-        <div class="review-author">Sarah Turner · Google</div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">Sehr leckeres und auch mal etwas anderes Frühstück. Wir sind sehr freundlich und zuvorkommend bedient worden. Unser Tipp: das Frühstück für 2!</p>
-        <div class="review-author">Bec cs · Google</div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">Very lovely, you can have breakfast till 16:00. Their Bouya breakfast is good and more than enough for 2 people. They have amazing Moroccan tea and sweets.</p>
-        <div class="review-author">Noural Diab · Google</div>
-      </div>
-      <div class="review-card reveal">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">Immer wieder sehr sehr gerne — alles mit Liebe hergerichtet. Man fühlt sich einfach wohl und alles ein Gaumenschmaus. ✨</p>
-        <div class="review-author">Annette Chauch · Google</div>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:2.5rem;">
-      <a href="https://search.google.com/local/reviews?placeid=ChIJjxmPAMbLuEcRxgRZK6oijRE" target="_blank" class="btn btn--primary">
-        Alle Google-Bewertungen lesen
-      </a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     CTA
-============================================================ -->
-<section class="cta-section">
-  <div class="container">
-    <h2>Marokkanisches Frühstück bis 16 Uhr</h2>
-    <p>Kommen Sie vorbei — wir freuen uns auf Sie.</p>
-    <a href="https://maps.app.goo.gl/bouya" class="btn btn--light">Route planen</a>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     INFO
-============================================================ -->
-<section class="info" id="info">
-  <div class="mosaic-border-top" style="background-color:var(--sky-light); position:absolute; top:0; left:0; right:0;"></div>
-  <div class="container" style="position:relative; z-index:1; padding-top:2rem;">
-    <div class="section-label reveal" style="color:var(--teal-light);"><span style="width:20px;height:1px;background:var(--teal-light);display:block;margin-right:.5rem;"></span>Besuchen Sie uns</div>
-    <h2 class="section-title reveal" style="color:var(--beige);">Öffnungszeiten & Kontakt</h2>
-
-    <div class="info__grid" style="margin-top:3rem;">
-      <!-- Hours -->
-      <div class="reveal">
-        <div class="info__block-title">Öffnungszeiten</div>
-        <div class="hours__row">
-          <span class="hours__day">Montag & Dienstag</span>
-          <span class="hours__time closed">Ruhetag</span>
-        </div>
-        <div class="hours__row">
-          <span class="hours__day">Mittwoch</span>
-          <span class="hours__time">09:00 – 00:00</span>
-        </div>
-        <div class="hours__row">
-          <span class="hours__day">Donnerstag</span>
-          <span class="hours__time">09:00 – 00:00</span>
-        </div>
-        <div class="hours__row">
-          <span class="hours__day">Freitag</span>
-          <span class="hours__time">09:00 – 00:00</span>
-        </div>
-        <div class="hours__row">
-          <span class="hours__day">Samstag</span>
-          <span class="hours__time">09:00 – 00:00</span>
-        </div>
-        <div class="hours__row">
-          <span class="hours__day">Sonntag & Feiertags</span>
-          <span class="hours__time">09:00 – 18:00</span>
-        </div>
-        <div style="margin-top:1rem; font-size:0.75rem; color:rgba(168,216,234,0.4); font-family:var(--font-accent); font-style:italic;">
-          Frühstück wird täglich bis 16:00 Uhr serviert.
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <div class="reveal">
-        <div class="info__block-title">Kontakt & Adresse</div>
-        <div class="contact__item">
-          <div class="contact__icon">📍</div>
-          <div>
-            <div class="contact__label">Adresse</div>
-            <div class="contact__value">Oststraße 124<br>40210 Düsseldorf</div>
-          </div>
-        </div>
-        <div class="contact__item">
-          <div class="contact__icon">✉️</div>
-          <div>
-            <div class="contact__label">E-Mail</div>
-            <div class="contact__value"><a href="mailto:info@bouyacoffee.com" style="color:var(--teal-light);">info@bouyacoffee.com</a></div>
-          </div>
-        </div>
-        <div class="contact__item">
-          <div class="contact__icon">🅿️</div>
-          <div>
-            <div class="contact__label">Parken</div>
-            <div class="contact__value">Öffentliche Parkplätze in der Nähe vorhanden</div>
-          </div>
-        </div>
-        <div class="contact__item">
-          <div class="contact__icon">📶</div>
-          <div>
-            <div class="contact__label">WLAN</div>
-            <div class="contact__value">Freies WLAN für alle Gäste</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Map -->
-      <div class="reveal">
-        <div class="info__block-title">So finden Sie uns</div>
-        <div class="map__frame">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.085!2d6.775!3d51.222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8cbbc009f8f8f%3A0x118d22aa2b5904c6!2sBouya%20Coffee%20Supreme!5e0!3m2!1sde!2sde!4v1234567890"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Bouya Coffee Supreme auf Google Maps">
-          </iframe>
-        </div>
-        <a href="https://maps.app.goo.gl/bouyacoffee" target="_blank" style="display:inline-block;margin-top:0.75rem;font-size:0.7rem;color:var(--teal-light);font-family:var(--font-display);letter-spacing:0.1em;text-transform:uppercase;">
-          → In Google Maps öffnen
+  <div class="site-shell">
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a class="logo" href="#home" aria-label="Bouya Coffee Supreme Startseite">
+          <img src="https://bouyacoffee.com/wp-content/uploads/2021/09/bouya-logo-1.png" alt="Bouya Coffee Supreme" />
         </a>
-      </div>
-    </div>
-  </div>
-</section>
 
+        <nav class="nav nav--desktop" aria-label="Hauptnavigation">
+          <a href="#about">Über Bouya</a>
+          <a href="#menu">Speisekarte</a>
+          <a href="#experience">Erlebnis</a>
+          <a href="#gallery">Galerie</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
 
-<!-- ============================================================
-     FOOTER
-============================================================ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__logo">
-        <img src="https://bouyacoffee.com/wp-content/uploads/2021/09/bouya-logo-1.png" alt="Bouya Coffee Supreme">
+        <div class="header__actions">
+          <a class="btn btn--ghost btn--sm" href="#menu">Speisekarte</a>
+          <a class="btn btn--primary btn--sm" href="#contact">Besuchen</a>
+          <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-      <ul class="footer__links">
-        <li><a href="https://bouyacoffee.com/impressum/">Impressum</a></li>
-        <li><a href="https://bouyacoffee.com/datenschutz/">Datenschutz</a></li>
-        <li><a href="mailto:info@bouyacoffee.com">Kontakt</a></li>
-      </ul>
-      <div class="footer__social">
-        <a href="https://www.instagram.com/bouyacoffee/" target="_blank" aria-label="Instagram">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+
+      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+        <a href="#about">Über Bouya</a>
+        <a href="#menu">Speisekarte</a>
+        <a href="#experience">Erlebnis</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#reviews">Bewertungen</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero__bg"></div>
+        <div class="hero__grain"></div>
+        <div class="hero__glow hero__glow--one"></div>
+        <div class="hero__glow hero__glow--two"></div>
+
+        <div class="container hero__inner">
+          <div class="hero__copy reveal">
+            <div class="eyebrow">
+              <span></span>
+              Oststraße 124 · Düsseldorf
+            </div>
+            <h1>Einladend. Hell. Besonders.<br /><span>Ein Stück Marokko mitten in Düsseldorf.</span></h1>
+            <p>
+              Marokkanisches Frühstück, Specialty Coffee, hausgemachte Kuchen und eine Atmosphäre,
+              die nicht nach Standard-Café aussieht, sondern nach echter Auszeit.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#menu">Speisekarte entdecken</a>
+              <a class="btn btn--secondary" href="#contact">Route & Öffnungszeiten</a>
+            </div>
+            <ul class="hero__facts" aria-label="Highlights">
+              <li>Frühstück bis 16 Uhr</li>
+              <li>Specialty Coffee</li>
+              <li>Marokkanisches Flair</li>
+            </ul>
+          </div>
+
+          <div class="hero__cards reveal">
+            <article class="floating-card floating-card--main">
+              <div class="floating-card__image-wrap">
+                <img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fruehstueck.jpg" alt="Marokkanisches Frühstück bei Bouya Coffee" />
+              </div>
+              <div class="floating-card__content">
+                <div class="floating-card__label">Signature</div>
+                <h2>Frühstück mit Charakter</h2>
+                <p>Große Platten, warme Farben, liebevolle Details und ein starker erster Eindruck.</p>
+              </div>
+            </article>
+
+            <article class="floating-card floating-card--mini">
+              <div class="floating-card__icon">✦</div>
+              <div>
+                <strong>Atmosphäre statt 08/15</strong>
+                <p>Hell, hochwertig und deutlich einladender als ein klassischer dunkler Café-Look.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <a class="scroll-indicator" href="#about" aria-label="Weiter scrollen">
+          <span>Scroll</span>
+          <i></i>
         </a>
-        <a href="https://www.facebook.com/bouyacoffee/" target="_blank" aria-label="Facebook">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
+      </section>
+
+      <section class="trust-bar">
+        <div class="trust-bar__track">
+          <span>Marokkanisches Frühstück</span>
+          <span>Specialty Coffee</span>
+          <span>Hausgemachte Kuchen</span>
+          <span>Fresh & Tasty</span>
+          <span>Frühstück bis 16 Uhr</span>
+          <span>WLAN für Gäste</span>
+          <span>Marokkanisches Frühstück</span>
+          <span>Specialty Coffee</span>
+          <span>Hausgemachte Kuchen</span>
+          <span>Fresh & Tasty</span>
+          <span>Frühstück bis 16 Uhr</span>
+          <span>WLAN für Gäste</span>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container about__grid">
+          <div class="about__visual reveal">
+            <div class="about__stack">
+              <img class="about__img about__img--one" src="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg" alt="Bouya Coffee Supreme Innenansicht" />
+              <img class="about__img about__img--two" src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-getraenke.jpg" alt="Getränke bei Bouya Coffee" />
+              <div class="about__badge">
+                <strong>Bouya</strong>
+                <span>Supreme Coffee · Breakfast · Cakes</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__copy reveal">
+            <div class="eyebrow eyebrow--teal"><span></span>Über Bouya Coffee</div>
+            <h2 class="section-title">Cleanes Design. Wärmere Wirkung. Mehr Premium-Gefühl.</h2>
+            <p class="section-text">
+              Die bestehende Bouya-Seite vermittelt schon marokkanisches Frühstück, Kaffee, Kuchen und Gastfreundschaft.
+              Der Hebel liegt jetzt im Auftritt: heller, luftiger, hochwertiger, emotionaler und visuell klarer.
+            </p>
+            <div class="about__points">
+              <article>
+                <h3>Mehr Einladung</h3>
+                <p>Helle Flächen, sanfte Blauakzente und warme Cream-Töne bringen Ruhe und Qualität in den Auftritt.</p>
+              </article>
+              <article>
+                <h3>Bessere Hierarchie</h3>
+                <p>Saubere Abstände, klare Textblöcke und ruhige Karten machen die Seite sofort verständlicher.</p>
+              </article>
+              <article>
+                <h3>Mehr Wirkung</h3>
+                <p>Animationen, Layer, Lichtverläufe und bessere Bildinszenierung sorgen dafür, dass die Seite hängen bleibt.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience section" id="experience">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="eyebrow eyebrow--teal"><span></span>Das Erlebnis</div>
+            <h2 class="section-title">Nicht einfach ein Café. Ein visueller und kulinarischer Break.</h2>
+          </div>
+          <div class="experience__grid">
+            <article class="experience-card reveal">
+              <div class="experience-card__number">01</div>
+              <h3>Frühstück wie im Märchen</h3>
+              <p>Große marokkanische Frühstücke, liebevoll angerichtet und klar als Signature des Hauses positioniert.</p>
+            </article>
+            <article class="experience-card reveal">
+              <div class="experience-card__number">02</div>
+              <h3>Fresh & Tasty</h3>
+              <p>Avocado, Shakshuka, Matcha und moderne Café-Favoriten holen die Marke ins Jetzt.</p>
+            </article>
+            <article class="experience-card reveal">
+              <div class="experience-card__number">03</div>
+              <h3>Atmosphäre mit Wiedererkennung</h3>
+              <p>Marokkanische Seele, aber nicht überladen. Clean, hochwertig und klar für Düsseldorf positioniert.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu section" id="menu">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="eyebrow eyebrow--teal"><span></span>Speisekarte</div>
+            <h2 class="section-title">Was Bouya stark macht</h2>
+            <p class="section-subtext">Die wichtigsten Kategorien aus der Live-Seite sind direkt, modern und übersichtlich aufbereitet.</p>
+          </div>
+
+          <div class="tabs reveal" role="tablist" aria-label="Speisekarte Kategorien">
+            <button class="tab is-active" data-tab="fruehstueck" role="tab" aria-selected="true">Frühstück</button>
+            <button class="tab" data-tab="fresh" role="tab" aria-selected="false">Fresh & Tasty</button>
+            <button class="tab" data-tab="aufstriche" role="tab" aria-selected="false">Aufstriche</button>
+            <button class="tab" data-tab="msemen" role="tab" aria-selected="false">Msemen & Harcha</button>
+            <button class="tab" data-tab="getraenke" role="tab" aria-selected="false">Kaffee & Tee</button>
+            <button class="tab" data-tab="kalt" role="tab" aria-selected="false">Kaltgetränke</button>
+          </div>
+
+          <div class="tab-panel is-active" id="fruehstueck">
+            <div class="menu-grid">
+              <article class="menu-card reveal"><h3>Marokkanisches Frühstück · 1 Person</h3><p>2 Spiegeleier, Vache qui rit, Oliven, Honig, Msemen, Fladenbrot, Minztee und Orangensaft</p><strong>15,90 €</strong></article>
+              <article class="menu-card reveal"><h3>Marokkanisches Frühstück · 2 Personen</h3><p>Salate, Hummus, Walnuss-Pesto, Minz-Joghurt-Dip, Obst, Gemüse, Eier, Brot, Tee und Orangensaft</p><strong>45,90 €</strong></article>
+              <article class="menu-card reveal"><h3>Souk-Platte</h3><p>Hummus, Walnuss-Pesto, Feta, eingelegte Paprika, Oliven und saisonale Extras</p><strong>16,90 €</strong></article>
+              <article class="menu-card reveal"><h3>Belegte Stulle · Avocado, Lachs & Spiegelei</h3><p>Auf Rucola, frisch belegt und fein angerichtet</p><strong>13,90 €</strong></article>
+              <article class="menu-card reveal"><h3>Belegte Stulle · Pesto, Tomate & Burrata</h3><p>Cremige Burrata, Pesto und Rucola als moderne Frühstücksoption</p><strong>14,90 €</strong></article>
+              <article class="menu-card reveal"><h3>Omeletts</h3><p>Natur oder mit Spinat & Feta, Sucuk, Chatar Wurst oder Tomate & Feta</p><strong>ab 7,90 €</strong></article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="fresh">
+            <div class="menu-grid">
+              <article class="menu-card"><h3>Überbackene Avocado</h3><p>Mit Ei und Käse auf Rucola, dazu Walnuss-Pesto, Oliven und Brot</p><strong>15,90 €</strong></article>
+              <article class="menu-card"><h3>Geröstete Avocado</h3><p>Mit Tomaten-Minz-Salat auf Rucola und geröstetem Brot mit Räucherlachs</p><strong>16,90 €</strong></article>
+              <article class="menu-card"><h3>Shakshuka mit Ei & Feta</h3><p>Würzige Tomatensoße mit pochierten Eiern, Feta, Lauchzwiebeln, Brot und Oliven</p><strong>15,90 €</strong></article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="aufstriche">
+            <div class="menu-grid">
+              <article class="menu-card"><h3>Hummus mit Brot</h3><p>Cremig, frisch und ideal zum Teilen</p><strong>7,90 €</strong></article>
+              <article class="menu-card"><h3>Walnuss-Pesto mit Brot</h3><p>Würzig und markant, typisch Bouya</p><strong>9,90 €</strong></article>
+              <article class="menu-card"><h3>Minz-Feta-Dip mit Fladenbrot</h3><p>Frisch, cremig und aromatisch</p><strong>8,90 €</strong></article>
+              <article class="menu-card"><h3>Joghurt mit Obst</h3><p>Leicht, frisch und angenehm</p><strong>9,90 €</strong></article>
+              <article class="menu-card"><h3>Joghurt mit Obst, Müsli, Honig & Nüssen</h3><p>Die stärkere Frühstücksvariante</p><strong>12,90 €</strong></article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="msemen">
+            <div class="menu-grid">
+              <article class="menu-card"><h3>Msemen</h3><p>Traditionelles marokkanisches Fladenbrot, fluffig und warm</p><strong>3,50 €</strong></article>
+              <article class="menu-card"><h3>Harcha</h3><p>Marokkanisches Grießbrot, außen knusprig und innen weich</p><strong>3,50 €</strong></article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="getraenke">
+            <div class="menu-grid">
+              <article class="menu-card"><h3>Espresso · Cappuccino · Flat White</h3><p>Klassische Kaffeeoptionen aus dem Specialty-Coffee-Bereich</p><strong>ab 3,00 €</strong></article>
+              <article class="menu-card"><h3>Matcha Latte</h3><p>Modernes Signature-Getränk mit klarer Visual-Qualität</p><strong>5,90 €</strong></article>
+              <article class="menu-card"><h3>Frischer marokkanischer Minztee</h3><p>Klein, mittel oder groß – einer der stärksten Markenanker auf der Seite</p><strong>ab 4,50 €</strong></article>
+              <article class="menu-card"><h3>Hot Chocolate</h3><p>Vollmilch, weiße Schokolade, Zartbitter oder Schokiato</p><strong>5,90 €</strong></article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="kalt">
+            <div class="menu-grid">
+              <article class="menu-card"><h3>Iced Matcha Variationen</h3><p>Klassisch, Strawberry, Mango oder Blueberry</p><strong>ab 6,90 €</strong></article>
+              <article class="menu-card"><h3>Smoothies</h3><p>Avocado-Banane, Avocado-Dattel oder fruchtige Varianten</p><strong>7,90 €</strong></article>
+              <article class="menu-card"><h3>Hausgemachter Eistee & Schorlen</h3><p>Minze-Limette, Himbeere, Mango-Minz und weitere frische Optionen</p><strong>ab 5,90 €</strong></article>
+              <article class="menu-card"><h3>Frisch gepresster Orangensaft</h3><p>Passt perfekt zum Frühstücksangebot</p><strong>4,90 €</strong></article>
+            </div>
+          </div>
+
+          <div class="menu__footer reveal">
+            <a class="btn btn--secondary" href="https://bouyacoffee.com/speisekarte/digitale-speisekarte.pdf" target="_blank" rel="noopener noreferrer">Vollständige Speisekarte als PDF</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="eyebrow eyebrow--teal"><span></span>Galerie</div>
+            <h2 class="section-title">Mehr Licht. Mehr Luft. Mehr Sehnsucht, vorbeizukommen.</h2>
+          </div>
+          <div class="gallery-grid">
+            <figure class="gallery-card gallery-card--large reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg" alt="Atmosphäre im Bouya Coffee Supreme" /></figure>
+            <figure class="gallery-card reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fruehstueck.jpg" alt="Marokkanisches Frühstück" /></figure>
+            <figure class="gallery-card reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fresh-tasty.jpg" alt="Fresh and Tasty Gerichte" /></figure>
+            <figure class="gallery-card reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-getraenke.jpg" alt="Getränke bei Bouya Coffee" /></figure>
+            <figure class="gallery-card reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2022/06/fd128ba6-4edb-11ec-8170-8ee065675e52___bouya_coffee_supreme_cover_1.jpg-1-696x392-1.webp" alt="Bouya Coffee Supreme Außenwirkung" /></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section" id="reviews">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="eyebrow eyebrow--teal"><span></span>Bewertungen</div>
+            <h2 class="section-title">Stimmen, die Vertrauen aufbauen</h2>
+          </div>
+
+          <div class="reviews-grid">
+            <article class="review-card reveal"><span>★★★★★</span><p>“This breakfast was like a short trip to Morocco. Very authentic, special and delicious.”</p><strong>Ekrem Namazci · Google</strong></article>
+            <article class="review-card reveal"><span>★★★★★</span><p>“Super leckeres, reichhaltiges Frühstück zu einem fairen Preis. Ein Stück Orient in Düsseldorf.”</p><strong>Janine · Google</strong></article>
+            <article class="review-card reveal"><span>★★★★★</span><p>“Very lovely. The Bouya breakfast is more than enough for 2 people. Amazing Moroccan tea and sweets.”</p><strong>Noural Diab · Google</strong></article>
+          </div>
+
+          <div class="reviews__cta reveal">
+            <a class="btn btn--primary" href="https://search.google.com/local/reviews?placeid=ChIJjxmPAMbLuEcRxgRZK6oijRE" target="_blank" rel="noopener noreferrer">Alle Bewertungen lesen</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="container contact__grid">
+          <div class="contact__copy reveal">
+            <div class="eyebrow eyebrow--teal"><span></span>Besuchen Sie uns</div>
+            <h2 class="section-title">Öffnungszeiten, Standort und der letzte Trigger zum Vorbeikommen.</h2>
+            <div class="contact-card-list">
+              <article class="contact-card">
+                <h3>Adresse</h3>
+                <p>Oststraße 124<br />40210 Düsseldorf</p>
+              </article>
+              <article class="contact-card">
+                <h3>Öffnungszeiten</h3>
+                <p>Montag & Dienstag: Ruhetag<br />Mittwoch bis Samstag: 09:00 – 00:00 Uhr<br />Sonntag & Feiertage: 09:00 – 18:00 Uhr</p>
+              </article>
+              <article class="contact-card">
+                <h3>Extra</h3>
+                <p>Frühstück bis 16 Uhr · WLAN für Gäste · Öffentliche Parkplätze in der Nähe</p>
+              </article>
+              <article class="contact-card">
+                <h3>Kontakt</h3>
+                <p><a href="mailto:info@bouyacoffee.com">info@bouyacoffee.com</a></p>
+              </article>
+            </div>
+            <div class="contact__actions">
+              <a class="btn btn--primary" href="https://maps.app.goo.gl/bouya" target="_blank" rel="noopener noreferrer">Route planen</a>
+              <a class="btn btn--secondary" href="mailto:info@bouyacoffee.com">E-Mail schreiben</a>
+            </div>
+          </div>
+
+          <div class="contact__map reveal">
+            <div class="map-card">
+              <iframe
+                title="Bouya Coffee Supreme auf Google Maps"
+                src="https://www.google.com/maps?q=Bouya%20Coffee%20Supreme%20D%C3%BCsseldorf&z=15&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+          <img class="footer__logo" src="https://bouyacoffee.com/wp-content/uploads/2021/09/bouya-logo-1.png" alt="Bouya Coffee Supreme" />
+          <p>Bouya Coffee Supreme · Oststraße 124 · 40210 Düsseldorf</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer Navigation">
+          <a href="https://bouyacoffee.com/impressum/" target="_blank" rel="noopener noreferrer">Impressum</a>
+          <a href="https://bouyacoffee.com/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutz</a>
+          <a href="https://www.instagram.com/bouyacoffee/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </nav>
       </div>
-    </div>
-    <p class="footer__copy">© 2025 Bouya Coffee Supreme · Oststraße 124, 40210 Düsseldorf · Alle Rechte vorbehalten</p>
+    </footer>
   </div>
-</footer>
 
-
-<!-- ============================================================
-     JAVASCRIPT
-============================================================ -->
-<script>
-// Menu tabs
-function showTab(id, btn) {
-  document.querySelectorAll('.menu__panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.menu__tab').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  btn.classList.add('active');
-}
-
-// Mobile nav
-function toggleMenu() {
-  const m = document.getElementById('mobileMenu');
-  m.classList.toggle('open');
-}
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// Nav background on scroll
-window.addEventListener('scroll', () => {
-  const nav = document.getElementById('nav');
-  if (window.scrollY > 60) {
-    nav.style.background = 'rgba(10,10,8,0.99)';
-  } else {
-    nav.style.background = 'rgba(10,10,8,0.96)';
-  }
-});
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
