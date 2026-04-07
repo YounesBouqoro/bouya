@@ -4,360 +4,778 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bouya Coffee Supreme – Marokkanisches Café in Düsseldorf</title>
-  <meta name="description" content="Bouya Coffee Supreme in Düsseldorf: Marokkanisches Frühstück bis 16 Uhr, Specialty Coffee, hausgemachte Kuchen und ein einladendes Café-Erlebnis auf der Oststraße 124." />
+  <meta
+    name="description"
+    content="Bouya Coffee Supreme in Düsseldorf: Marokkanisches Frühstück, frisch gebrühter Kaffee, Minztee und hausgemachte Kuchen auf der Oststraße 124."
+  />
   <meta property="og:title" content="Bouya Coffee Supreme Düsseldorf" />
-  <meta property="og:description" content="Ein Stück Marokko mitten in Düsseldorf – Frühstück, Kaffee, Kuchen und Atmosphäre." />
+  <meta
+    property="og:description"
+    content="Marokkanisches Frühstück, Kaffee & Kuchen in Düsseldorf – herzlich, frisch und besonders."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg" />
-  <meta name="theme-color" content="#8fd7eb" />
+  <meta name="theme-color" content="#f6fbff" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Raleway:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="site-shell">
-    <header class="header" id="header">
-      <div class="container header__inner">
-        <a class="logo" href="#home" aria-label="Bouya Coffee Supreme Startseite">
-          <img src="https://bouyacoffee.com/wp-content/uploads/2021/09/bouya-logo-1.png" alt="Bouya Coffee Supreme" />
-        </a>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="brand" aria-label="Bouya Coffee Supreme Startseite">
+        <img
+          src="https://bouyacoffee.com/wp-content/uploads/2021/09/bouya-logo-1.png"
+          alt="Bouya Coffee Supreme"
+          class="brand__logo"
+        />
+      </a>
 
-        <nav class="nav nav--desktop" aria-label="Hauptnavigation">
-          <a href="#about">Über Bouya</a>
-          <a href="#menu">Speisekarte</a>
-          <a href="#experience">Erlebnis</a>
-          <a href="#gallery">Galerie</a>
-          <a href="#contact">Kontakt</a>
-        </nav>
-
-        <div class="header__actions">
-          <a class="btn btn--ghost btn--sm" href="#menu">Speisekarte</a>
-          <a class="btn btn--primary btn--sm" href="#contact">Besuchen</a>
-          <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
-            <span></span><span></span><span></span>
-          </button>
-        </div>
-      </div>
-
-      <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
-        <a href="#about">Über Bouya</a>
+      <nav class="nav nav--desktop" aria-label="Hauptnavigation">
+        <a href="#about">Über uns</a>
         <a href="#menu">Speisekarte</a>
-        <a href="#experience">Erlebnis</a>
         <a href="#gallery">Galerie</a>
         <a href="#reviews">Bewertungen</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#info">Kontakt</a>
       </nav>
-    </header>
 
-    <main>
-      <section class="hero" id="home">
-        <div class="hero__bg"></div>
-        <div class="hero__grain"></div>
+      <a class="header__cta" href="#info">Jetzt besuchen</a>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <nav class="mobile-menu__nav" aria-label="Mobile Navigation">
+        <a href="#about">Über uns</a>
+        <a href="#menu">Speisekarte</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#reviews">Bewertungen</a>
+        <a href="#info">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__media">
+        <img
+          src="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg"
+          alt="Bouya Coffee Supreme in Düsseldorf"
+          class="hero__image"
+        />
+        <div class="hero__overlay"></div>
         <div class="hero__glow hero__glow--one"></div>
         <div class="hero__glow hero__glow--two"></div>
+      </div>
 
-        <div class="container hero__inner">
-          <div class="hero__copy reveal">
-            <div class="eyebrow">
-              <span></span>
-              Oststraße 124 · Düsseldorf
-            </div>
-            <h1><span>Ein Stück Marokko mitten in Düsseldorf.</span></h1>
+      <div class="container hero__content">
+        <div class="hero__eyebrow reveal">Oststraße 124 · 40210 Düsseldorf</div>
+        <h1 class="hero__title reveal">
+          Marokkanisches Frühstück,<br />
+          <span>Kaffee & Kuchen</span> in Düsseldorf
+        </h1>
+        <p class="hero__text reveal">
+          Liebevoll zubereitet, herzlich serviert und perfekt für Ihre kleine Auszeit
+          mitten in der Stadt.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a href="#menu" class="btn btn--primary">Speisekarte ansehen</a>
+          <a href="#info" class="btn btn--secondary">Öffnungszeiten & Kontakt</a>
+        </div>
+
+        <div class="hero__facts reveal">
+          <div class="hero__fact">
+            <strong>Frühstück bis 16 Uhr</strong>
+            <span>entspannt genießen</span>
+          </div>
+          <div class="hero__fact">
+            <strong>Frischer Minztee</strong>
+            <span>marokkanische Klassiker</span>
+          </div>
+          <div class="hero__fact">
+            <strong>Kaffee & Kuchen</strong>
+            <span>den ganzen Tag</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker__track">
+        <span>Frisch gebrühter Kaffee</span>
+        <span>Marokkanisches Frühstück</span>
+        <span>Frischer Minztee</span>
+        <span>Hausgemachte Kuchen</span>
+        <span>Fresh & Tasty</span>
+        <span>Freies WLAN</span>
+        <span>Frühstück bis 16 Uhr</span>
+
+        <span>Frisch gebrühter Kaffee</span>
+        <span>Marokkanisches Frühstück</span>
+        <span>Frischer Minztee</span>
+        <span>Hausgemachte Kuchen</span>
+        <span>Fresh & Tasty</span>
+        <span>Freies WLAN</span>
+        <span>Frühstück bis 16 Uhr</span>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="about__card about__card--main">
+            <img
+              src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fruehstueck.jpg"
+              alt="Marokkanisches Frühstück bei Bouya Coffee"
+            />
+          </div>
+          <div class="about__card about__card--small">
+            <img
+              src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-getraenke.jpg"
+              alt="Getränke bei Bouya Coffee"
+            />
+          </div>
+          <div class="about__accent"></div>
+        </div>
+
+        <div class="about__content reveal">
+          <div class="section-label">Über Bouya Coffee</div>
+          <h2 class="section-title">
+            Gemütlich frühstücken,<br />
+            Kaffee genießen und ankommen
+          </h2>
+          <p class="section-text">
+            Bouya Coffee Supreme steht für marokkanisches Frühstück, frisch gebrühten
+            Kaffee, hausgemachte Kuchen und eine Atmosphäre, in der man sich sofort
+            willkommen fühlt.
+          </p>
+
+          <blockquote class="about__quote">
+            „Unsere Produkte werden sorgfältig und liebevoll ausgesucht und nach
+            Möglichkeit von regionalen Händlern bezogen.“
+          </blockquote>
+
+          <p class="section-text">
+            Ob ein ausgedehntes Frühstück, ein frischer Minztee oder eine kleine Pause
+            mit Kaffee und Kuchen – bei uns genießen Sie Ihre Auszeit in ruhiger,
+            warmer und besonderer Atmosphäre.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="section-label">Warum Gäste gerne wiederkommen</div>
+          <h2 class="section-title">Ein Ort für Frühstück, Genuss und entspannte Momente</h2>
+        </div>
+
+        <div class="highlights__grid">
+          <article class="highlight-card reveal">
+            <div class="highlight-card__icon">☕</div>
+            <h3>Frisch gebrühter Kaffee</h3>
             <p>
-              Marokkanisches Frühstück, Specialty Coffee, hausgemachte Kuchen und eine Atmosphäre,
-              die nicht nach Standard-Café aussieht, sondern nach echter Auszeit.
+              Vom ersten Espresso bis zum entspannten Cappuccino – Kaffee gehört bei
+              Bouya einfach dazu.
             </p>
-            <div class="hero__cta">
-              <a class="btn btn--primary" href="#menu">Speisekarte entdecken</a>
-              <a class="btn btn--secondary" href="#contact">Route & Öffnungszeiten</a>
+          </article>
+
+          <article class="highlight-card reveal">
+            <div class="highlight-card__icon">🥐</div>
+            <h3>Marokkanisches Frühstück</h3>
+            <p>
+              Herzhaft, süß, liebevoll angerichtet und ideal, um gemeinsam zu genießen.
+            </p>
+          </article>
+
+          <article class="highlight-card reveal">
+            <div class="highlight-card__icon">🍵</div>
+            <h3>Minztee & Spezialitäten</h3>
+            <p>
+              Frischer marokkanischer Minztee, hausgemachte Highlights und kleine
+              Genussmomente mit Charakter.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-label">Unsere Speisekarte</div>
+          <h2 class="section-title">Frühstück, Fresh & Tasty, Kaffee und mehr</h2>
+          <p class="section-text section-text--light">
+            Von marokkanischen Frühstücken über frische Avocado-Gerichte bis zu Kaffee,
+            Minztee, Smoothies und hausgemachten Spezialitäten – hier finden Sie unsere
+            beliebtesten Klassiker.
+          </p>
+        </div>
+
+        <div class="tabs reveal" role="tablist" aria-label="Speisekarte">
+          <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="tab-fruehstueck">
+            Frühstück
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tab-tasty">
+            Fresh & Tasty
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tab-aufstriche">
+            Aufstriche & Joghurt
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tab-msemen">
+            Msemen & Harcha
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tab-getraenke">
+            Kaffee & Tee
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" data-tab="tab-kalt">
+            Kaltgetränke
+          </button>
+        </div>
+
+        <div class="tab-panels reveal">
+          <div class="tab-panel is-active" id="tab-fruehstueck" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Marokkanisches Frühstück (1 Person)</h3>
+                  <span>15,90 €</span>
+                </div>
+                <p>
+                  2 Spiegeleier, 2 Vache qui rit, Oliven, Honig, Msemen, Fladenbrot,
+                  Kanne frischer Minztee & frisch gepresster Orangensaft.
+                </p>
+                <small>Extra wählbar: Gebratene Sucuk 3,90 € · Chatar Wurst 3,50 €</small>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Marokkanisches Frühstück (2 Personen)</h3>
+                  <span>45,90 €</span>
+                </div>
+                <p>
+                  3 Salate, Hummus, Walnuss-Pesto, Minz-Joghurt-Dip, Rote Bete, Oliven,
+                  Paprika, Feigenmarmelade, Honig, Butter, Gouda, Chatar, Obst & Gemüse,
+                  2 Spiegeleier, Msemen, Harcha, 2 Fladenbrote, große Kanne Minztee und
+                  2 Orangensäfte.
+                </p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Souk-Platte</h3>
+                  <span>16,90 €</span>
+                </div>
+                <p>
+                  Hausgemachter Hummus trifft auf würziges Walnuss-Pesto, cremigen Feta,
+                  eingelegte Paprika, Oliven und saisonale Extras.
+                </p>
+                <small>
+                  Extras: Gouda 1,00 € · Brie / Mozzarella 1,50 € · Mortadella 1,00 € ·
+                  Salami (Rind) 1,20 € · Lachs 2,90 € · Avocado 2,50 € · Spiegelei 2,00 €
+                </small>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Belegte Stulle – Avocado, Lachs & Spiegelei</h3>
+                  <span>13,90 €</span>
+                </div>
+                <p>Auf Rucola, frisch belegt und liebevoll angerichtet.</p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Belegte Stulle – Pesto, Rucola, Tomate & Burrata</h3>
+                  <span>14,90 €</span>
+                </div>
+                <p>Cremige Burrata trifft auf frisches Pesto und knackigen Rucola.</p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Omeletts</h3>
+                  <span>ab 7,90 €</span>
+                </div>
+                <p>Aus 3 Eiern, dazu Brot, Oliven und Vache qui rit.</p>
+                <small>
+                  Varianten: Natur 7,90 € · Spinat & Feta 9,90 € · Sucuk 9,90 € ·
+                  Chatar Wurst 9,90 € · Tomate & Feta 9,90 €
+                </small>
+              </article>
             </div>
-            <ul class="hero__facts" aria-label="Highlights">
-              <li>Frühstück bis 16 Uhr</li>
-              <li>Specialty Coffee</li>
-              <li>Marokkanisches Flair</li>
+          </div>
+
+          <div class="tab-panel" id="tab-tasty" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Überbackene Avocado</h3>
+                  <span>15,90 €</span>
+                </div>
+                <p>
+                  Avocado überbacken mit Ei und Käse auf Rucola, dazu Walnuss-Pesto,
+                  Oliven und Brot.
+                </p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Geröstete Avocado</h3>
+                  <span>16,90 €</span>
+                </div>
+                <p>
+                  Geröstete Avocado mit Tomaten-Minz-Salat auf Rucola, dazu geröstetes
+                  Brot mit Räucherlachs.
+                </p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Shakshuka mit Ei & Feta</h3>
+                  <span>15,90 €</span>
+                </div>
+                <p>
+                  Aromatische Pfanne mit pochierten Eiern in würziger Tomatensoße, mit
+                  Feta und Lauchzwiebeln, dazu Brot und Oliven.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-aufstriche" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Hummus mit Brot</h3>
+                  <span>7,90 €</span>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Walnuss-Pesto mit Brot</h3>
+                  <span>9,90 €</span>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Minz-Feta-Dip mit Fladenbrot</h3>
+                  <span>8,90 €</span>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Joghurt mit Obst</h3>
+                  <span>9,90 €</span>
+                </div>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Joghurt mit Obst, Müsli, Honig & Nüssen</h3>
+                  <span>12,90 €</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-msemen" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Msemen</h3>
+                  <span>3,50 €</span>
+                </div>
+                <p>Traditionelles marokkanisches Fladenbrot, fluffig und warm.</p>
+                <small>Mit Nutella, Honig, Pistazien-Creme oder Lotus-Creme.</small>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Harcha</h3>
+                  <span>3,50 €</span>
+                </div>
+                <p>Marokkanisches Grießbrot, außen knusprig und innen weich.</p>
+                <small>Mit Nutella, Honig, Pistazien-Creme oder Lotus-Creme.</small>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-getraenke" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card"><div class="menu-card__top"><h3>Espresso</h3><span>3,00 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Espresso Macchiato</h3><span>3,50 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Cortado</h3><span>3,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Cappuccino</h3><span>3,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Latte Macchiato</h3><span>4,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Flat White</h3><span>4,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Matcha Latte</h3><span>5,90 €</span></div></article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Frischer marokkanischer Minztee</h3>
+                  <span>ab 4,50 €</span>
+                </div>
+                <p>Klein 4,50 € · Mittel 7,90 € · Groß 10,90 €</p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Hot Chocolate</h3>
+                  <span>5,90 €</span>
+                </div>
+                <p>Vollmilch · Weiße Schokolade · Zartbitter · Schokiato</p>
+              </article>
+
+              <article class="menu-card"><div class="menu-card__top"><h3>Schwarztee</h3><span>2,90 €</span></div></article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Extras</h3>
+                  <span>ab 1,00 €</span>
+                </div>
+                <p>
+                  Extra Shot 1,50 € · Hafer / Mandel / Kokos / Soja 1,00 € ·
+                  Caramel / Haselnuss / Vanille Sirup 1,00 €
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="tab-kalt" role="tabpanel">
+            <div class="menu-grid">
+              <article class="menu-card"><div class="menu-card__top"><h3>Iced Americano</h3><span>4,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Iced Latte</h3><span>5,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Iced Matcha</h3><span>6,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Iced Strawberry Matcha</h3><span>7,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Iced Mango / Blueberry Matcha</h3><span>7,90 €</span></div></article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Smoothies</h3>
+                  <span>7,90 €</span>
+                </div>
+                <p>Avocado-Banane · Avocado-Dattel · Himbeere-Banane-Orange · Mango-Ingwer-Orange</p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Hausgemachter Eistee</h3>
+                  <span>5,90 €</span>
+                </div>
+                <p>Minze-Limette · Himbeere</p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Schorlen</h3>
+                  <span>5,90 €</span>
+                </div>
+                <p>Mango-Minz · Johannisbeere · Maracuja</p>
+              </article>
+
+              <article class="menu-card">
+                <div class="menu-card__top">
+                  <h3>Alkoholfreie Cocktails</h3>
+                  <span>6,90 €</span>
+                </div>
+                <p>Virgin Mojito · Ipanema</p>
+              </article>
+
+              <article class="menu-card"><div class="menu-card__top"><h3>Frisch gepresster Orangensaft</h3><span>4,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Fritz Kola & Limonaden</h3><span>3,90 €</span></div></article>
+              <article class="menu-card"><div class="menu-card__top"><h3>Wasser still & Sprudel</h3><span>ab 3,50 €</span></div></article>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__footer reveal">
+          <a
+            href="https://bouyacoffee.com/speisekarte/digitale-speisekarte.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--secondary"
+          >
+            Vollständige Speisekarte öffnen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-label">Galerie</div>
+          <h2 class="section-title">Ein Blick in das Bouya Coffee</h2>
+          <p class="section-text">
+            Eindrücke aus unserem Café, unseren Frühstücken und den Momenten, die
+            Bouya Coffee so besonders machen.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-item--large reveal">
+            <img
+              src="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg"
+              alt="Atmosphäre im Bouya Coffee"
+            />
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fruehstueck.jpg"
+              alt="Frühstück im Bouya Coffee"
+            />
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fresh-tasty.jpg"
+              alt="Fresh & Tasty im Bouya Coffee"
+            />
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-getraenke.jpg"
+              alt="Getränke bei Bouya Coffee"
+            />
+          </figure>
+
+          <figure class="gallery-item reveal">
+            <img
+              src="https://bouyacoffee.com/wp-content/uploads/2022/06/fd128ba6-4edb-11ec-8170-8ee065675e52___bouya_coffee_supreme_cover_1.jpg-1-696x392-1.webp"
+              alt="Bouya Coffee Außenansicht"
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="reviews">
+      <div class="container">
+        <div class="section-head center reveal">
+          <div class="section-label">Bewertungen</div>
+          <h2 class="section-title">Was unsere Gäste an Bouya lieben</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card reveal">
+            <div class="review-card__stars">★★★★★</div>
+            <p>
+              This breakfast was like a short trip to Morocco! Very authentic with
+              variety of choices for everyone.
+            </p>
+            <strong>Ekrem Namazci · Google</strong>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__stars">★★★★★</div>
+            <p>
+              Super leckeres, reichhaltiges Frühstück zu einem fairen Preis. Ein Stück
+              Orient in Düsseldorf.
+            </p>
+            <strong>Janine · Google</strong>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__stars">★★★★★</div>
+            <p>
+              The staff are welcoming and lovely. The food and cakes are so tasty and
+              fresh.
+            </p>
+            <strong>Sarah Turner · Google</strong>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__stars">★★★★★</div>
+            <p>
+              Sehr leckeres und auch mal etwas anderes Frühstück. Sehr freundlich und
+              zuvorkommend bedient.
+            </p>
+            <strong>Bec cs · Google</strong>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__stars">★★★★★</div>
+            <p>
+              Very lovely, you can have breakfast till 16:00. Amazing Moroccan tea and
+              sweets.
+            </p>
+            <strong>Noural Diab · Google</strong>
+          </article>
+
+          <article class="review-card reveal">
+            <div class="review-card__stars">★★★★★</div>
+            <p>
+              Immer wieder sehr gerne – alles mit Liebe hergerichtet. Man fühlt sich
+              einfach wohl.
+            </p>
+            <strong>Annette Chauch · Google</strong>
+          </article>
+        </div>
+
+        <div class="reviews__action reveal">
+          <a
+            href="https://search.google.com/local/reviews?placeid=ChIJjxmPAMbLuEcRxgRZK6oijRE"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--primary"
+          >
+            Google-Bewertungen ansehen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <div class="section-label">Besuchen Sie uns</div>
+          <h2 class="cta__title">
+            Frühstück bis 16 Uhr. Kaffee, Tee und Kuchen den ganzen Tag.
+          </h2>
+          <p class="cta__text">
+            Besuchen Sie uns auf der Oststraße und genießen Sie Ihre Auszeit bei
+            Bouya Coffee Supreme.
+          </p>
+        </div>
+
+        <a href="https://maps.app.goo.gl/bouya" class="btn btn--primary">Jetzt Route planen</a>
+      </div>
+    </section>
+
+    <section class="info section" id="info">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="section-label">Kontakt</div>
+          <h2 class="section-title">Öffnungszeiten, Adresse & Anfahrt</h2>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card reveal">
+            <h3>Öffnungszeiten</h3>
+            <ul class="hours-list">
+              <li><span>Montag & Dienstag</span><strong>Ruhetag</strong></li>
+              <li><span>Mittwoch</span><strong>09:00 – 00:00</strong></li>
+              <li><span>Donnerstag</span><strong>09:00 – 00:00</strong></li>
+              <li><span>Freitag</span><strong>09:00 – 00:00</strong></li>
+              <li><span>Samstag</span><strong>09:00 – 00:00</strong></li>
+              <li><span>Sonntag & Feiertags</span><strong>09:00 – 18:00</strong></li>
             </ul>
-          </div>
+            <p class="info-note">Frühstück servieren wir täglich bis 16:00 Uhr.</p>
+          </article>
 
-          <div class="hero__cards reveal">
-            <article class="floating-card floating-card--main">
-              <div class="floating-card__image-wrap">
-                <img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fruehstueck.jpg" alt="Marokkanisches Frühstück bei Bouya Coffee" />
-              </div>
-              <div class="floating-card__content">
-                <div class="floating-card__label">Signature</div>
-                <h2>Frühstück mit Charakter</h2>
-                <p>Große Platten, warme Farben, liebevolle Details und ein starker erster Eindruck.</p>
-              </div>
-            </article>
-
-            <article class="floating-card floating-card--mini">
-              <div class="floating-card__icon">✦</div>
+          <article class="info-card reveal">
+            <h3>Kontakt & Adresse</h3>
+            <div class="info-stack">
               <div>
-                <strong>Atmosphäre statt 08/15</strong>
-                <p>Hell, hochwertig und deutlich einladender als ein klassischer dunkler Café-Look.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <a class="scroll-indicator" href="#about" aria-label="Weiter scrollen">
-          <span>Scroll</span>
-          <i></i>
-        </a>
-      </section>
-
-      <section class="trust-bar">
-        <div class="trust-bar__track">
-          <span>Marokkanisches Frühstück</span>
-          <span>Specialty Coffee</span>
-          <span>Hausgemachte Kuchen</span>
-          <span>Fresh & Tasty</span>
-          <span>Frühstück bis 16 Uhr</span>
-          <span>WLAN für Gäste</span>
-          <span>Marokkanisches Frühstück</span>
-          <span>Specialty Coffee</span>
-          <span>Hausgemachte Kuchen</span>
-          <span>Fresh & Tasty</span>
-          <span>Frühstück bis 16 Uhr</span>
-          <span>WLAN für Gäste</span>
-        </div>
-      </section>
-
-      <section class="about section" id="about">
-        <div class="container about__grid">
-          <div class="about__visual reveal">
-            <div class="about__stack">
-              <img class="about__img about__img--one" src="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg" alt="Bouya Coffee Supreme Innenansicht" />
-              <img class="about__img about__img--two" src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-getraenke.jpg" alt="Getränke bei Bouya Coffee" />
-              <div class="about__badge">
-                <strong>Bouya</strong>
-                <span>Supreme Coffee · Breakfast · Cakes</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="about__copy reveal">
-            <div class="eyebrow eyebrow--teal"><span></span>Über Bouya Coffee</div>
-            <h2 class="section-title">Cleanes Design. Wärmere Wirkung. Mehr Premium-Gefühl.</h2>
-            <p class="section-text">
-              Die bestehende Bouya-Seite vermittelt schon marokkanisches Frühstück, Kaffee, Kuchen und Gastfreundschaft.
-              Der Hebel liegt jetzt im Auftritt: heller, luftiger, hochwertiger, emotionaler und visuell klarer.
-            </p>
-            <div class="about__points">
-              <article>
-                <h3>Mehr Einladung</h3>
-                <p>Helle Flächen, sanfte Blauakzente und warme Cream-Töne bringen Ruhe und Qualität in den Auftritt.</p>
-              </article>
-              <article>
-                <h3>Bessere Hierarchie</h3>
-                <p>Saubere Abstände, klare Textblöcke und ruhige Karten machen die Seite sofort verständlicher.</p>
-              </article>
-              <article>
-                <h3>Mehr Wirkung</h3>
-                <p>Animationen, Layer, Lichtverläufe und bessere Bildinszenierung sorgen dafür, dass die Seite hängen bleibt.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="experience section" id="experience">
-        <div class="container">
-          <div class="section-head reveal">
-            <div class="eyebrow eyebrow--teal"><span></span>Das Erlebnis</div>
-            <h2 class="section-title">Nicht einfach ein Café. Ein visueller und kulinarischer Break.</h2>
-          </div>
-          <div class="experience__grid">
-            <article class="experience-card reveal">
-              <div class="experience-card__number">01</div>
-              <h3>Frühstück wie im Märchen</h3>
-              <p>Große marokkanische Frühstücke, liebevoll angerichtet und klar als Signature des Hauses positioniert.</p>
-            </article>
-            <article class="experience-card reveal">
-              <div class="experience-card__number">02</div>
-              <h3>Fresh & Tasty</h3>
-              <p>Avocado, Shakshuka, Matcha und moderne Café-Favoriten holen die Marke ins Jetzt.</p>
-            </article>
-            <article class="experience-card reveal">
-              <div class="experience-card__number">03</div>
-              <h3>Atmosphäre mit Wiedererkennung</h3>
-              <p>Marokkanische Seele, aber nicht überladen. Clean, hochwertig und klar für Düsseldorf positioniert.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="menu section" id="menu">
-        <div class="container">
-          <div class="section-head reveal">
-            <div class="eyebrow eyebrow--teal"><span></span>Speisekarte</div>
-            <h2 class="section-title">Was Bouya stark macht</h2>
-            <p class="section-subtext">Die wichtigsten Kategorien aus der Live-Seite sind direkt, modern und übersichtlich aufbereitet.</p>
-          </div>
-
-          <div class="tabs reveal" role="tablist" aria-label="Speisekarte Kategorien">
-            <button class="tab is-active" data-tab="fruehstueck" role="tab" aria-selected="true">Frühstück</button>
-            <button class="tab" data-tab="fresh" role="tab" aria-selected="false">Fresh & Tasty</button>
-            <button class="tab" data-tab="aufstriche" role="tab" aria-selected="false">Aufstriche</button>
-            <button class="tab" data-tab="msemen" role="tab" aria-selected="false">Msemen & Harcha</button>
-            <button class="tab" data-tab="getraenke" role="tab" aria-selected="false">Kaffee & Tee</button>
-            <button class="tab" data-tab="kalt" role="tab" aria-selected="false">Kaltgetränke</button>
-          </div>
-
-          <div class="tab-panel is-active" id="fruehstueck">
-            <div class="menu-grid">
-              <article class="menu-card reveal"><h3>Marokkanisches Frühstück · 1 Person</h3><p>2 Spiegeleier, Vache qui rit, Oliven, Honig, Msemen, Fladenbrot, Minztee und Orangensaft</p><strong>15,90 €</strong></article>
-              <article class="menu-card reveal"><h3>Marokkanisches Frühstück · 2 Personen</h3><p>Salate, Hummus, Walnuss-Pesto, Minz-Joghurt-Dip, Obst, Gemüse, Eier, Brot, Tee und Orangensaft</p><strong>45,90 €</strong></article>
-              <article class="menu-card reveal"><h3>Souk-Platte</h3><p>Hummus, Walnuss-Pesto, Feta, eingelegte Paprika, Oliven und saisonale Extras</p><strong>16,90 €</strong></article>
-              <article class="menu-card reveal"><h3>Belegte Stulle · Avocado, Lachs & Spiegelei</h3><p>Auf Rucola, frisch belegt und fein angerichtet</p><strong>13,90 €</strong></article>
-              <article class="menu-card reveal"><h3>Belegte Stulle · Pesto, Tomate & Burrata</h3><p>Cremige Burrata, Pesto und Rucola als moderne Frühstücksoption</p><strong>14,90 €</strong></article>
-              <article class="menu-card reveal"><h3>Omeletts</h3><p>Natur oder mit Spinat & Feta, Sucuk, Chatar Wurst oder Tomate & Feta</p><strong>ab 7,90 €</strong></article>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="fresh">
-            <div class="menu-grid">
-              <article class="menu-card"><h3>Überbackene Avocado</h3><p>Mit Ei und Käse auf Rucola, dazu Walnuss-Pesto, Oliven und Brot</p><strong>15,90 €</strong></article>
-              <article class="menu-card"><h3>Geröstete Avocado</h3><p>Mit Tomaten-Minz-Salat auf Rucola und geröstetem Brot mit Räucherlachs</p><strong>16,90 €</strong></article>
-              <article class="menu-card"><h3>Shakshuka mit Ei & Feta</h3><p>Würzige Tomatensoße mit pochierten Eiern, Feta, Lauchzwiebeln, Brot und Oliven</p><strong>15,90 €</strong></article>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="aufstriche">
-            <div class="menu-grid">
-              <article class="menu-card"><h3>Hummus mit Brot</h3><p>Cremig, frisch und ideal zum Teilen</p><strong>7,90 €</strong></article>
-              <article class="menu-card"><h3>Walnuss-Pesto mit Brot</h3><p>Würzig und markant, typisch Bouya</p><strong>9,90 €</strong></article>
-              <article class="menu-card"><h3>Minz-Feta-Dip mit Fladenbrot</h3><p>Frisch, cremig und aromatisch</p><strong>8,90 €</strong></article>
-              <article class="menu-card"><h3>Joghurt mit Obst</h3><p>Leicht, frisch und angenehm</p><strong>9,90 €</strong></article>
-              <article class="menu-card"><h3>Joghurt mit Obst, Müsli, Honig & Nüssen</h3><p>Die stärkere Frühstücksvariante</p><strong>12,90 €</strong></article>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="msemen">
-            <div class="menu-grid">
-              <article class="menu-card"><h3>Msemen</h3><p>Traditionelles marokkanisches Fladenbrot, fluffig und warm</p><strong>3,50 €</strong></article>
-              <article class="menu-card"><h3>Harcha</h3><p>Marokkanisches Grießbrot, außen knusprig und innen weich</p><strong>3,50 €</strong></article>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="getraenke">
-            <div class="menu-grid">
-              <article class="menu-card"><h3>Espresso · Cappuccino · Flat White</h3><p>Klassische Kaffeeoptionen aus dem Specialty-Coffee-Bereich</p><strong>ab 3,00 €</strong></article>
-              <article class="menu-card"><h3>Matcha Latte</h3><p>Modernes Signature-Getränk mit klarer Visual-Qualität</p><strong>5,90 €</strong></article>
-              <article class="menu-card"><h3>Frischer marokkanischer Minztee</h3><p>Klein, mittel oder groß – einer der stärksten Markenanker auf der Seite</p><strong>ab 4,50 €</strong></article>
-              <article class="menu-card"><h3>Hot Chocolate</h3><p>Vollmilch, weiße Schokolade, Zartbitter oder Schokiato</p><strong>5,90 €</strong></article>
-            </div>
-          </div>
-
-          <div class="tab-panel" id="kalt">
-            <div class="menu-grid">
-              <article class="menu-card"><h3>Iced Matcha Variationen</h3><p>Klassisch, Strawberry, Mango oder Blueberry</p><strong>ab 6,90 €</strong></article>
-              <article class="menu-card"><h3>Smoothies</h3><p>Avocado-Banane, Avocado-Dattel oder fruchtige Varianten</p><strong>7,90 €</strong></article>
-              <article class="menu-card"><h3>Hausgemachter Eistee & Schorlen</h3><p>Minze-Limette, Himbeere, Mango-Minz und weitere frische Optionen</p><strong>ab 5,90 €</strong></article>
-              <article class="menu-card"><h3>Frisch gepresster Orangensaft</h3><p>Passt perfekt zum Frühstücksangebot</p><strong>4,90 €</strong></article>
-            </div>
-          </div>
-
-          <div class="menu__footer reveal">
-            <a class="btn btn--secondary" href="https://bouyacoffee.com/speisekarte/digitale-speisekarte.pdf" target="_blank" rel="noopener noreferrer">Vollständige Speisekarte als PDF</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="gallery section" id="gallery">
-        <div class="container">
-          <div class="section-head reveal">
-            <div class="eyebrow eyebrow--teal"><span></span>Galerie</div>
-            <h2 class="section-title">Mehr Licht. Mehr Luft. Mehr Sehnsucht, vorbeizukommen.</h2>
-          </div>
-          <div class="gallery-grid">
-            <figure class="gallery-card gallery-card--large reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2021/09/main1.jpg" alt="Atmosphäre im Bouya Coffee Supreme" /></figure>
-            <figure class="gallery-card reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fruehstueck.jpg" alt="Marokkanisches Frühstück" /></figure>
-            <figure class="gallery-card reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-fresh-tasty.jpg" alt="Fresh and Tasty Gerichte" /></figure>
-            <figure class="gallery-card reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2022/06/bouya-coffee-getraenke.jpg" alt="Getränke bei Bouya Coffee" /></figure>
-            <figure class="gallery-card reveal"><img src="https://bouyacoffee.com/wp-content/uploads/2022/06/fd128ba6-4edb-11ec-8170-8ee065675e52___bouya_coffee_supreme_cover_1.jpg-1-696x392-1.webp" alt="Bouya Coffee Supreme Außenwirkung" /></figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="reviews section" id="reviews">
-        <div class="container">
-          <div class="section-head reveal">
-            <div class="eyebrow eyebrow--teal"><span></span>Bewertungen</div>
-            <h2 class="section-title">Stimmen, die Vertrauen aufbauen</h2>
-          </div>
-
-          <div class="reviews-grid">
-            <article class="review-card reveal"><span>★★★★★</span><p>“This breakfast was like a short trip to Morocco. Very authentic, special and delicious.”</p><strong>Ekrem Namazci · Google</strong></article>
-            <article class="review-card reveal"><span>★★★★★</span><p>“Super leckeres, reichhaltiges Frühstück zu einem fairen Preis. Ein Stück Orient in Düsseldorf.”</p><strong>Janine · Google</strong></article>
-            <article class="review-card reveal"><span>★★★★★</span><p>“Very lovely. The Bouya breakfast is more than enough for 2 people. Amazing Moroccan tea and sweets.”</p><strong>Noural Diab · Google</strong></article>
-          </div>
-
-          <div class="reviews__cta reveal">
-            <a class="btn btn--primary" href="https://search.google.com/local/reviews?placeid=ChIJjxmPAMbLuEcRxgRZK6oijRE" target="_blank" rel="noopener noreferrer">Alle Bewertungen lesen</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact section" id="contact">
-        <div class="container contact__grid">
-          <div class="contact__copy reveal">
-            <div class="eyebrow eyebrow--teal"><span></span>Besuchen Sie uns</div>
-            <h2 class="section-title">Öffnungszeiten, Standort und der letzte Trigger zum Vorbeikommen.</h2>
-            <div class="contact-card-list">
-              <article class="contact-card">
-                <h3>Adresse</h3>
+                <span class="info-label">Adresse</span>
                 <p>Oststraße 124<br />40210 Düsseldorf</p>
-              </article>
-              <article class="contact-card">
-                <h3>Öffnungszeiten</h3>
-                <p>Montag & Dienstag: Ruhetag<br />Mittwoch bis Samstag: 09:00 – 00:00 Uhr<br />Sonntag & Feiertage: 09:00 – 18:00 Uhr</p>
-              </article>
-              <article class="contact-card">
-                <h3>Extra</h3>
-                <p>Frühstück bis 16 Uhr · WLAN für Gäste · Öffentliche Parkplätze in der Nähe</p>
-              </article>
-              <article class="contact-card">
-                <h3>Kontakt</h3>
-                <p><a href="mailto:info@bouyacoffee.com">info@bouyacoffee.com</a></p>
-              </article>
-            </div>
-            <div class="contact__actions">
-              <a class="btn btn--primary" href="https://maps.app.goo.gl/bouya" target="_blank" rel="noopener noreferrer">Route planen</a>
-              <a class="btn btn--secondary" href="mailto:info@bouyacoffee.com">E-Mail schreiben</a>
-            </div>
-          </div>
+              </div>
 
-          <div class="contact__map reveal">
-            <div class="map-card">
+              <div>
+                <span class="info-label">E-Mail</span>
+                <p><a href="mailto:info@bouyacoffee.com">info@bouyacoffee.com</a></p>
+              </div>
+
+              <div>
+                <span class="info-label">Hinweise</span>
+                <p>Öffentliche Parkplätze in der Nähe vorhanden · Freies WLAN für alle Gäste</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="info-card reveal">
+            <h3>So finden Sie uns</h3>
+            <div class="map-frame">
               <iframe
-                title="Bouya Coffee Supreme auf Google Maps"
-                src="https://www.google.com/maps?q=Bouya%20Coffee%20Supreme%20D%C3%BCsseldorf&z=15&output=embed"
+                src="https://www.google.com/maps?q=Oststra%C3%9Fe%20124%2C%2040210%20D%C3%BCsseldorf&z=15&output=embed"
                 loading="lazy"
+                allowfullscreen=""
                 referrerpolicy="no-referrer-when-downgrade"
+                title="Bouya Coffee Supreme auf Google Maps"
               ></iframe>
             </div>
-          </div>
+            <a
+              href="https://maps.app.goo.gl/bouyacoffee"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="info-link"
+            >
+              In Google Maps öffnen
+            </a>
+          </article>
         </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div>
-          <img class="footer__logo" src="https://bouyacoffee.com/wp-content/uploads/2021/09/bouya-logo-1.png" alt="Bouya Coffee Supreme" />
-          <p>Bouya Coffee Supreme · Oststraße 124 · 40210 Düsseldorf</p>
-        </div>
-        <nav class="footer__nav" aria-label="Footer Navigation">
-          <a href="https://bouyacoffee.com/impressum/" target="_blank" rel="noopener noreferrer">Impressum</a>
-          <a href="https://bouyacoffee.com/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutz</a>
-          <a href="https://www.instagram.com/bouyacoffee/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </nav>
       </div>
-    </footer>
-  </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img
+          src="https://bouyacoffee.com/wp-content/uploads/2021/09/bouya-logo-1.png"
+          alt="Bouya Coffee Supreme"
+          class="footer__logo"
+        />
+        <p>Marokkanisches Café mit Frühstück, Kaffee, Minztee und hausgemachten Spezialitäten.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer Navigation">
+        <a href="https://bouyacoffee.com/impressum/" target="_blank" rel="noopener noreferrer">Impressum</a>
+        <a href="https://bouyacoffee.com/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutz</a>
+        <a href="mailto:info@bouyacoffee.com">Kontakt</a>
+      </nav>
+
+      <div class="footer__socials">
+        <a
+          href="https://www.instagram.com/bouyacoffee/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          Instagram
+        </a>
+        <a
+          href="https://www.facebook.com/bouyacoffee/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          Facebook
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <p class="footer__copy">
+        © 2025 Bouya Coffee Supreme · Oststraße 124 · 40210 Düsseldorf · Alle Rechte vorbehalten
+      </p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
