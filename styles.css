@@ -947,9 +947,9 @@ select {
   }
 
   .hero__title {
-  font-size: 1.55rem;
-  line-height: 1.12;
-  max-width: 9.5ch;
+  font-size: 1.32rem;
+  line-height: 1.14;
+  max-width: 8.6ch;
 }
   .hero__text {
     font-size: 0.96rem;
@@ -1223,8 +1223,10 @@ select {
   }
 
   .hero__title {
-    font-size: clamp(1.85rem, 10.8vw, 2.6rem);
-  }
+  font-size: 1.2rem;
+  line-height: 1.16;
+  max-width: 8.2ch;
+}
 
   .hero__text {
     font-size: 0.92rem;
