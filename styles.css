@@ -949,7 +949,7 @@ select {
   .hero__title {
     font-size: clamp(1.75rem, 8.8vw, 2.45rem);
     line-height: 1.1;
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .hero__text {
