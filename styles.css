@@ -947,11 +947,10 @@ select {
   }
 
   .hero__title {
-    font-size: clamp(1.75rem, 8.8vw, 2.45rem);
-    line-height: 1.1;
-    max-width: 90%;
-  }
-
+  font-size: 1.55rem;
+  line-height: 1.12;
+  max-width: 9.5ch;
+}
   .hero__text {
     font-size: 0.96rem;
     line-height: 1.55;
